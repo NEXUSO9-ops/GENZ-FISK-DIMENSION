@@ -1,0 +1,519 @@
+/* FISK DIMENSION × OMEGA-9 — UI Components: Forms */
+/* Version: 1.0.0 */
+
+/* ===== Form Base Styles ===== */
+.fisk-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fisk-space-lg);
+}
+
+.fisk-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fisk-space-xs);
+}
+
+.fisk-form-label {
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-sm);
+  font-weight: var(--fisk-font-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-xs);
+}
+
+.fisk-form-label .fisk-required {
+  color: var(--fisk-cyan);
+}
+
+.fisk-form-hint {
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-sm);
+  opacity: 0.6;
+  margin-top: var(--fisk-space-xs);
+}
+
+.fisk-form-error {
+  color: var(--fisk-blocked);
+  font-size: var(--fisk-text-sm);
+  margin-top: var(--fisk-space-xs);
+}
+
+/* ===== Input Field ===== */
+.fisk-input {
+  background: var(--fisk-obsidian);
+  border: 1px solid var(--fisk-sapphire-50);
+  border-radius: var(--fisk-radius-subtle);
+  padding: var(--fisk-space-sm) var(--fisk-space-md);
+  color: var(--fisk-ice);
+  font-family: var(--fisk-font-primary);
+  font-size: var(--fisk-text-base);
+  transition: all var(--fisk-transition-normal);
+  width: 100%;
+}
+
+.fisk-input::placeholder {
+  color: var(--fisk-ice);
+  opacity: 0.5;
+}
+
+.fisk-input:focus {
+  outline: none;
+  border-color: var(--fisk-cyan);
+  box-shadow: 0 0 0 2px var(--fisk-cyan-10);
+}
+
+.fisk-input:hover {
+  border-color: var(--fisk-cyan-80);
+}
+
+.fisk-input:disabled {
+  background: var(--fisk-obsidian);
+  border-color: var(--fisk-sapphire-30);
+  color: var(--fisk-ice);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fisk-input:read-only {
+  background: var(--fisk-navy);
+  border-color: var(--fisk-sapphire-30);
+}
+
+/* ===== Input Sizes ===== */
+.fisk-input-sm {
+  padding: var(--fisk-space-xs) var(--fisk-space-sm);
+  font-size: var(--fisk-text-sm);
+}
+
+.fisk-input-lg {
+  padding: var(--fisk-space-md) var(--fisk-space-lg);
+  font-size: var(--fisk-text-lg);
+}
+
+/* ===== Input with Icon ===== */
+.fisk-input-with-icon {
+  position: relative;
+}
+
+.fisk-input-with-icon .fisk-input {
+  padding-left: var(--fisk-space-xl);
+}
+
+.fisk-input-with-icon .fisk-input-icon {
+  position: absolute;
+  left: var(--fisk-space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--fisk-ice);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.fisk-input-with-icon .fisk-input-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.fisk-input-with-icon .fisk-input:focus + .fisk-input-icon {
+  color: var(--fisk-cyan);
+  opacity: 1;
+}
+
+/* ===== Input with Button ===== */
+.fisk-input-with-btn {
+  position: relative;
+}
+
+.fisk-input-with-btn .fisk-input {
+  padding-right: var(--fisk-space-xl);
+}
+
+.fisk-input-with-btn .fisk-input-btn {
+  position: absolute;
+  right: var(--fisk-space-xs);
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--fisk-cyan);
+  cursor: pointer;
+  padding: var(--fisk-space-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fisk-input-with-btn .fisk-input-btn:hover {
+  color: #33DDFF;
+}
+
+.fisk-input-with-btn .fisk-input-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== Select Dropdown ===== */
+.fisk-select {
+  background: var(--fisk-obsidian);
+  border: 1px solid var(--fisk-sapphire-50);
+  border-radius: var(--fisk-radius-subtle);
+  padding: var(--fisk-space-sm) var(--fisk-space-md);
+  color: var(--fisk-ice);
+  font-family: var(--fisk-font-primary);
+  font-size: var(--fisk-text-base);
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300D4FF' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--fisk-space-sm) center;
+  background-size: 16px;
+  transition: all var(--fisk-transition-normal);
+  width: 100%;
+}
+
+.fisk-select::placeholder {
+  color: var(--fisk-ice);
+  opacity: 0.5;
+}
+
+.fisk-select:focus {
+  outline: none;
+  border-color: var(--fisk-cyan);
+  box-shadow: 0 0 0 2px var(--fisk-cyan-10);
+}
+
+.fisk-select:hover {
+  border-color: var(--fisk-cyan-80);
+}
+
+.fisk-select:disabled {
+  background: var(--fisk-obsidian);
+  border-color: var(--fisk-sapphire-30);
+  color: var(--fisk-ice);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fisk-select option {
+  background: var(--fisk-navy);
+  color: var(--fisk-ice);
+  padding: var(--fisk-space-sm) var(--fisk-space-md);
+}
+
+.fisk-select option:hover {
+  background: var(--fisk-cyan-10);
+}
+
+.fisk-select option:checked {
+  background: var(--fisk-cyan-20);
+}
+
+/* ===== Select Sizes ===== */
+.fisk-select-sm {
+  padding: var(--fisk-space-xs) var(--fisk-space-sm);
+  font-size: var(--fisk-text-sm);
+}
+
+.fisk-select-lg {
+  padding: var(--fisk-space-md) var(--fisk-space-lg);
+  font-size: var(--fisk-text-lg);
+}
+
+/* ===== Checkbox ===== */
+.fisk-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--fisk-space-sm);
+  cursor: pointer;
+}
+
+.fisk-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--fisk-cyan);
+  border-radius: var(--fisk-radius-sharp);
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+  transition: all var(--fisk-transition-normal);
+  position: relative;
+}
+
+.fisk-checkbox input[type="checkbox"]:checked {
+  background: var(--fisk-cyan);
+  border-color: var(--fisk-cyan);
+}
+
+.fisk-checkbox input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--fisk-obsidian);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.fisk-checkbox input[type="checkbox"]:hover {
+  border-color: #33DDFF;
+}
+
+.fisk-checkbox input[type="checkbox"]:disabled {
+  border-color: var(--fisk-cyan-50);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fisk-checkbox input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--fisk-cyan-10);
+}
+
+.fisk-checkbox .fisk-checkbox-label {
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-base);
+}
+
+/* ===== Radio Button ===== */
+.fisk-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--fisk-space-sm);
+  cursor: pointer;
+}
+
+.fisk-radio input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--fisk-cyan);
+  border-radius: 50%;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+  transition: all var(--fisk-transition-normal);
+  position: relative;
+}
+
+.fisk-radio input[type="radio"]:checked {
+  background: var(--fisk-cyan);
+  border-color: var(--fisk-cyan);
+}
+
+.fisk-radio input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--fisk-obsidian);
+}
+
+.fisk-radio input[type="radio"]:hover {
+  border-color: #33DDFF;
+}
+
+.fisk-radio input[type="radio"]:disabled {
+  border-color: var(--fisk-cyan-50);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fisk-radio input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--fisk-cyan-10);
+}
+
+.fisk-radio .fisk-radio-label {
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-base);
+}
+
+/* ===== Radio Group ===== */
+.fisk-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fisk-space-sm);
+}
+
+.fisk-radio-group.horizontal {
+  flex-direction: row;
+  gap: var(--fisk-space-lg);
+}
+
+/* ===== Textarea ===== */
+.fisk-textarea {
+  background: var(--fisk-obsidian);
+  border: 1px solid var(--fisk-sapphire-50);
+  border-radius: var(--fisk-radius-subtle);
+  padding: var(--fisk-space-md);
+  color: var(--fisk-ice);
+  font-family: var(--fisk-font-primary);
+  font-size: var(--fisk-text-base);
+  resize: vertical;
+  min-height: 100px;
+  transition: all var(--fisk-transition-normal);
+  width: 100%;
+}
+
+.fisk-textarea::placeholder {
+  color: var(--fisk-ice);
+  opacity: 0.5;
+}
+
+.fisk-textarea:focus {
+  outline: none;
+  border-color: var(--fisk-cyan);
+  box-shadow: 0 0 0 2px var(--fisk-cyan-10);
+}
+
+.fisk-textarea:hover {
+  border-color: var(--fisk-cyan-80);
+}
+
+.fisk-textarea:disabled {
+  background: var(--fisk-obsidian);
+  border-color: var(--fisk-sapphire-30);
+  color: var(--fisk-ice);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== Textarea with Character Counter ===== */
+.fisk-textarea-with-counter {
+  position: relative;
+}
+
+.fisk-textarea-with-counter .fisk-textarea {
+  padding-bottom: var(--fisk-space-xl);
+}
+
+.fisk-textarea-with-counter .fisk-counter {
+  position: absolute;
+  bottom: var(--fisk-space-sm);
+  right: var(--fisk-space-sm);
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-sm);
+  opacity: 0.7;
+}
+
+.fisk-textarea-with-counter .fisk-counter.warning {
+  color: var(--fisk-pending);
+}
+
+.fisk-textarea-with-counter .fisk-counter.error {
+  color: var(--fisk-blocked);
+}
+
+/* ===== Form Validation States ===== */
+.fisk-input-verified,
+.fisk-select-verified,
+.fisk-textarea-verified {
+  border-color: var(--fisk-verified);
+}
+
+.fisk-input-verified:focus,
+.fisk-select-verified:focus,
+.fisk-textarea-verified:focus {
+  box-shadow: 0 0 0 2px var(--fisk-verified-10);
+}
+
+.fisk-input-reported,
+.fisk-select-reported,
+.fisk-textarea-reported {
+  border-color: var(--fisk-reported);
+}
+
+.fisk-input-reported:focus,
+.fisk-select-reported:focus,
+.fisk-textarea-reported:focus {
+  box-shadow: 0 0 0 2px var(--fisk-reported-10);
+}
+
+.fisk-input-pending,
+.fisk-select-pending,
+.fisk-textarea-pending {
+  border-color: var(--fisk-pending);
+}
+
+.fisk-input-pending:focus,
+.fisk-select-pending:focus,
+.fisk-textarea-pending:focus {
+  box-shadow: 0 0 0 2px var(--fisk-pending-10);
+}
+
+.fisk-input-blocked,
+.fisk-select-blocked,
+.fisk-textarea-blocked {
+  border-color: var(--fisk-blocked);
+}
+
+.fisk-input-blocked:focus,
+.fisk-select-blocked:focus,
+.fisk-textarea-blocked:focus {
+  box-shadow: 0 0 0 2px var(--fisk-blocked-10);
+}
+
+.fisk-input-failed,
+.fisk-select-failed,
+.fisk-textarea-failed {
+  border-color: var(--fisk-failed);
+}
+
+.fisk-input-failed:focus,
+.fisk-select-failed:focus,
+.fisk-textarea-failed:focus {
+  box-shadow: 0 0 0 2px var(--fisk-failed-10);
+}
+
+/* ===== Form Row ===== */
+.fisk-form-row {
+  display: grid;
+  gap: var(--fisk-space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.fisk-form-row-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fisk-form-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ===== Form Inline ===== */
+.fisk-form-inline {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-md);
+}
+
+.fisk-form-inline .fisk-form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* ===== Form Actions ===== */
+.fisk-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--fisk-space-sm);
+  margin-top: var(--fisk-space-lg);
+  padding-top: var(--fisk-space-lg);
+  border-top: 1px solid var(--fisk-cyan-10);
+}
+
+.fisk-form-actions .fisk-btn-secondary {
+  order: 1;
+}
+
+.fisk-form-actions .fisk-btn-primary {
+  order: 2;
+}

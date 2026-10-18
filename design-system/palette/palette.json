@@ -1,0 +1,174 @@
+{
+  "name": "Fisk Dimension × Omega-9 Color Palette",
+  "version": "1.0.0",
+  "description": "Canonical color system for the Fisk Dimension and Omega-9 sovereign command ecosystem",
+  
+  "primary": {
+    "obsidian_black": {
+      "hex": "#0A0A0F",
+      "rgb": [10, 10, 15],
+      "hsl": [240, 20, 5],
+      "usage": "Primary backgrounds, deep surfaces",
+      "css_variable": "--fisk-obsidian"
+    },
+    "midnight_navy": {
+      "hex": "#0F172A",
+      "rgb": [15, 23, 42],
+      "hsl": [220, 48, 11],
+      "usage": "Secondary backgrounds, panels",
+      "css_variable": "--fisk-navy"
+    },
+    "ice_white": {
+      "hex": "#F8F9FA",
+      "rgb": [248, 249, 250],
+      "hsl": [210, 20, 98],
+      "usage": "Primary text, surfaces",
+      "css_variable": "--fisk-ice"
+    },
+    "electric_cyan": {
+      "hex": "#00D4FF",
+      "rgb": [0, 212, 255],
+      "hsl": [190, 100, 50],
+      "usage": "Primary accents, connectors, verified states",
+      "css_variable": "--fisk-cyan"
+    },
+    "deep_sapphire": {
+      "hex": "#1E3A8A",
+      "rgb": [30, 58, 138],
+      "hsl": [220, 65, 33],
+      "usage": "Secondary accents, depth",
+      "css_variable": "--fisk-sapphire"
+    },
+    "restrained_violet": {
+      "hex": "#6366F1",
+      "rgb": [99, 102, 241],
+      "hsl": [238, 84, 67],
+      "usage": "Tertiary accents, highlights, interactive elements",
+      "css_variable": "--fisk-violet"
+    },
+    "antique_gold": {
+      "hex": "#D4AF37",
+      "rgb": [212, 175, 55],
+      "hsl": [45, 64, 52],
+      "usage": "Metallic details, crowns, borders, pending states",
+      "css_variable": "--fisk-gold"
+    }
+  },
+  
+  "governance": {
+    "ivory": {
+      "hex": "#FFFFF0",
+      "rgb": [255, 255, 240],
+      "hsl": [60, 100, 97],
+      "usage": "Document backgrounds only",
+      "css_variable": "--fisk-ivory"
+    },
+    "pale_blue": {
+      "hex": "#E0F2FE",
+      "rgb": [224, 242, 254],
+      "hsl": [206, 92, 94],
+      "usage": "Presentation surfaces only",
+      "css_variable": "--fisk-pale-blue"
+    }
+  },
+  
+  "semantic_states": {
+    "verified": {
+      "primary": "#00D4FF",
+      "secondary": "#0099CC",
+      "symbol": "checkmark-circle",
+      "description": "Confirmed, audited, secure",
+      "css_variable": "--fisk-verified"
+    },
+    "reported": {
+      "primary": "#6366F1",
+      "secondary": "#4F46E5",
+      "symbol": "triangle",
+      "description": "User-submitted, unconfirmed",
+      "css_variable": "--fisk-reported"
+    },
+    "pending": {
+      "primary": "#D4AF37",
+      "secondary": "#B8860B",
+      "symbol": "hourglass",
+      "description": "In progress, awaiting",
+      "css_variable": "--fisk-pending"
+    },
+    "blocked": {
+      "primary": "#EF4444",
+      "secondary": "#DC2626",
+      "symbol": "square-slash",
+      "description": "Denied, restricted",
+      "css_variable": "--fisk-blocked"
+    },
+    "failed": {
+      "primary": "#7C2D12",
+      "secondary": "#591F0A",
+      "symbol": "x-circle",
+      "description": "Error, broken, invalid",
+      "css_variable": "--fisk-failed"
+    }
+  },
+  
+  "opacity_levels": {
+    "full": 1.0,
+    "high": 0.8,
+    "medium": 0.5,
+    "low": 0.3,
+    "subtle": 0.1,
+    "hint": 0.05
+  },
+  
+  "gradients": {
+    "celestial": {
+      "from": "#0F172A",
+      "to": "#1E3A8A",
+      "direction": "to bottom right",
+      "usage": "Hero sections, cosmic backgrounds"
+    },
+    "holographic": {
+      "from": "#00D4FF",
+      "to": "#6366F1",
+      "direction": "to right",
+      "usage": "Intelligence motifs, active states"
+    },
+    "gold_glow": {
+      "from": "#D4AF37",
+      "to": "#F4E48C",
+      "direction": "radial",
+      "usage": "Metallic highlights, crown effects"
+    },
+    "cyan_pulse": {
+      "from": "#00D4FF",
+      "to": "transparent",
+      "direction": "radial",
+      "usage": "Signal rings, active indicators"
+    }
+  },
+  
+  "border_widths": {
+    "connector": 1,
+    "standard": 2,
+    "emphasis": 3,
+    "heavy": 4
+  },
+  
+  "border_radius": {
+    "sharp": 2,
+    "subtle": 4,
+    "standard": 8,
+    "soft": 16
+  },
+  
+  "spacing": {
+    "xs": 4,
+    "sm": 8,
+    "md": 16,
+    "lg": 24,
+    "xl": 32,
+    "2xl": 48,
+    "3xl": 64,
+    "4xl": 96,
+    "5xl": 128
+  }
+}

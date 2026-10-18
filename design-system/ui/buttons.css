@@ -1,0 +1,287 @@
+/* FISK DIMENSION × OMEGA-9 — UI Components: Buttons */
+/* Version: 1.0.0 */
+
+/* ===== Button Base Styles ===== */
+button,
+.fisk-btn {
+  font-family: var(--fisk-font-primary);
+  font-weight: var(--fisk-font-medium);
+  border-radius: var(--fisk-radius-subtle);
+  cursor: pointer;
+  transition: all var(--fisk-transition-normal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--fisk-space-sm);
+  border: none;
+  text-decoration: none;
+}
+
+/* ===== Primary Button (Cyan) ===== */
+.fisk-btn-primary {
+  background: var(--fisk-cyan);
+  color: var(--fisk-obsidian);
+  border: none;
+  padding: var(--fisk-space-sm) var(--fisk-space-lg);
+  font-size: var(--fisk-text-base);
+}
+
+.fisk-btn-primary:hover {
+  background: #33DDFF;
+  box-shadow: var(--fisk-shadow-md);
+}
+
+.fisk-btn-primary:active {
+  background: #00AACC;
+  transform: translateY(1px);
+}
+
+.fisk-btn-primary:disabled {
+  background: var(--fisk-cyan-50);
+  color: var(--fisk-ice);
+  cursor: not-allowed;
+}
+
+/* ===== Secondary Button (Outline Cyan) ===== */
+.fisk-btn-secondary {
+  background: transparent;
+  color: var(--fisk-cyan);
+  border: 1px solid var(--fisk-cyan);
+  padding: var(--fisk-space-sm) var(--fisk-space-lg);
+  font-size: var(--fisk-text-base);
+}
+
+.fisk-btn-secondary:hover {
+  background: var(--fisk-cyan-10);
+  border-color: #33DDFF;
+}
+
+.fisk-btn-secondary:active {
+  background: var(--fisk-cyan-20);
+  transform: translateY(1px);
+}
+
+.fisk-btn-secondary:disabled {
+  background: transparent;
+  color: var(--fisk-cyan-50);
+  border-color: var(--fisk-cyan-50);
+  cursor: not-allowed;
+}
+
+/* ===== Gold Button (High Importance) ===== */
+.fisk-btn-gold {
+  background: var(--fisk-gold);
+  color: var(--fisk-obsidian);
+  border: none;
+  padding: var(--fisk-space-sm) var(--fisk-space-lg);
+  font-size: var(--fisk-text-base);
+}
+
+.fisk-btn-gold:hover {
+  background: #E6C249;
+  box-shadow: var(--fisk-shadow-gold);
+}
+
+.fisk-btn-gold:active {
+  background: #B8860B;
+  transform: translateY(1px);
+}
+
+.fisk-btn-gold:disabled {
+  background: var(--fisk-gold-50);
+  color: var(--fisk-ice);
+  cursor: not-allowed;
+}
+
+/* ===== Violet Button (Tertiary Action) ===== */
+.fisk-btn-violet {
+  background: var(--fisk-violet);
+  color: var(--fisk-ice);
+  border: none;
+  padding: var(--fisk-space-sm) var(--fisk-space-lg);
+  font-size: var(--fisk-text-base);
+}
+
+.fisk-btn-violet:hover {
+  background: #7C7FF4;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+}
+
+.fisk-btn-violet:active {
+  background: #4F46E5;
+  transform: translateY(1px);
+}
+
+.fisk-btn-violet:disabled {
+  background: var(--fisk-violet-50);
+  color: var(--fisk-ice);
+  cursor: not-allowed;
+}
+
+/* ===== Button Sizes ===== */
+.fisk-btn-sm {
+  padding: var(--fisk-space-xs) var(--fisk-space-md);
+  font-size: var(--fisk-text-sm);
+}
+
+.fisk-btn-md {
+  padding: var(--fisk-space-sm) var(--fisk-space-lg);
+  font-size: var(--fisk-text-base);
+}
+
+.fisk-btn-lg {
+  padding: var(--fisk-space-md) var(--fisk-space-xl);
+  font-size: var(--fisk-text-lg);
+}
+
+.fisk-btn-xl {
+  padding: var(--fisk-space-md) var(--fisk-space-2xl);
+  font-size: var(--fisk-text-xl);
+}
+
+/* ===== Icon Buttons ===== */
+.fisk-btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fisk-btn-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.fisk-btn-icon-sm {
+  width: 32px;
+  height: 32px;
+}
+
+.fisk-btn-icon-sm svg {
+  width: 16px;
+  height: 16px;
+}
+
+.fisk-btn-icon-lg {
+  width: 48px;
+  height: 48px;
+}
+
+.fisk-btn-icon-lg svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== Button with Icon ===== */
+.fisk-btn-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--fisk-space-xs);
+}
+
+.fisk-btn-with-icon .fisk-btn-icon-part {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== Button Groups ===== */
+.fisk-btn-group {
+  display: inline-flex;
+  gap: var(--fisk-space-sm);
+}
+
+.fisk-btn-group .fisk-btn:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.fisk-btn-group .fisk-btn:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* ===== Full Width Button ===== */
+.fisk-btn-full {
+  width: 100%;
+}
+
+/* ===== Loading State ===== */
+.fisk-btn-loading {
+  position: relative;
+  color: transparent;
+}
+
+.fisk-btn-loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--fisk-ice);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: fisk-spin 0.8s linear infinite;
+}
+
+@keyframes fisk-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== Button Variants with Status ===== */
+.fisk-btn-verified {
+  background: var(--fisk-verified-bg);
+  color: var(--fisk-verified);
+  border: 1px solid var(--fisk-verified);
+}
+
+.fisk-btn-verified:hover {
+  background: var(--fisk-verified);
+  color: var(--fisk-obsidian);
+}
+
+.fisk-btn-reported {
+  background: var(--fisk-reported-bg);
+  color: var(--fisk-reported);
+  border: 1px solid var(--fisk-reported);
+}
+
+.fisk-btn-reported:hover {
+  background: var(--fisk-reported);
+  color: var(--fisk-ice);
+}
+
+.fisk-btn-pending {
+  background: var(--fisk-pending-bg);
+  color: var(--fisk-pending);
+  border: 1px solid var(--fisk-pending);
+}
+
+.fisk-btn-pending:hover {
+  background: var(--fisk-pending);
+  color: var(--fisk-obsidian);
+}
+
+.fisk-btn-blocked {
+  background: var(--fisk-blocked-bg);
+  color: var(--fisk-blocked);
+  border: 1px solid var(--fisk-blocked);
+}
+
+.fisk-btn-blocked:hover {
+  background: var(--fisk-blocked);
+  color: var(--fisk-ice);
+}
+
+.fisk-btn-failed {
+  background: var(--fisk-failed-bg);
+  color: var(--fisk-failed);
+  border: 1px solid var(--fisk-failed);
+}
+
+.fisk-btn-failed:hover {
+  background: var(--fisk-failed);
+  color: var(--fisk-ice);
+}

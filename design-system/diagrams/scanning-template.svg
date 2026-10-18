@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Color Definitions -->
+    <radialGradient id="scanGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="scanVioletGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    
+    <linearGradient id="entityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    
+    <!-- Filter for glow -->
+    <filter id="scanGlowFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- Background Pattern -->
+    <pattern id="scanGrid" patternUnits="userSpaceOnUse" width="20" height="20">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00D4FF" stroke-width="0.3" opacity="0.05"/>
+    </pattern>
+    
+    <!-- Scan Line Pattern -->
+    <pattern id="scanLines" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#00D4FF" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0A0A0F"/>
+  <rect width="800" height="600" fill="url(#scanGrid)"/>
+  
+  <!-- Diagram Title -->
+  <g id="diagramTitle">
+    <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#00D4FF">
+      SECURITY SCANNING
+    </text>
+    <text x="400" y="50" text-anchor="middle" font-size="14" fill="#6366F1">
+      Fisk Dimension × Omega-9
+    </text>
+  </g>
+  
+  <!-- Main Diagram -->
+  <g id="scanningDiagram" transform="translate(400, 150)">
+    
+    <!-- Scan Origin: Holographic Core -->
+    <g id="scanOrigin">
+      <!-- Outer Glow -->
+      <circle cx="0" cy="0" r="120" fill="url(#scanGlow)" opacity="0.3" filter="url(#scanGlowFilter)"/>
+      
+      <!-- Core Circles -->
+      <circle cx="0" cy="0" r="80" fill="none" stroke="#00D4FF" stroke-width="2"/>
+      <circle cx="0" cy="0" r="60" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#00D4FF" stroke-width="1"/>
+      
+      <!-- Neural Structure -->
+      <path d="M-30 -30 L30 30 M-30 30 L30 -30" stroke="#00D4FF" stroke-width="1" opacity="0.8"/>
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#00D4FF" stroke-width="1"/>
+      <path d="M0 -20 L0 20 M-20 0 L20 0" stroke="#00D4FF" stroke-width="1"/>
+      
+      <!-- Central Point -->
+      <circle cx="0" cy="0" r="8" fill="#00D4FF"/>
+      <circle cx="0" cy="0" r="4" fill="#00FFFF"/>
+      
+      <!-- Label -->
+      <text x="0" y="-90" text-anchor="middle" font-size="12" font-weight="bold" fill="#00D4FF">
+        HOLOGRAPHIC CORE
+      </text>
+      <text x="0" y="-75" text-anchor="middle" font-size="10" fill="#00D4FF">
+        Scan Origin
+      </text>
+    </g>
+    
+    <!-- Scan Rings (Animated in actual use) -->
+    <g id="scanRings">
+      <circle cx="0" cy="0" r="100" fill="none" stroke="#00D4FF" stroke-width="0.5" opacity="0.8">
+        <animate attributeName="r" values="100; 150; 100" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8; 0.3; 0.8" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="120" fill="none" stroke="#00D4FF" stroke-width="0.5" opacity="0.6">
+        <animate attributeName="r" values="120; 170; 120" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+        <animate attributeName="opacity" values="0.6; 0.2; 0.6" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+      <circle cx="0" cy="0" r="140" fill="none" stroke="#00D4FF" stroke-width="0.5" opacity="0.4">
+        <animate attributeName="r" values="140; 190; 140" dur="3s" repeatCount="indefinite" begin="1s"/>
+        <animate attributeName="opacity" values="0.4; 0.1; 0.4" dur="3s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+    </g>
+    
+    <!-- Scan Targets (Entities) -->
+    
+    <!-- Target 1: Verified -->
+    <g id="target1" transform="translate(-250, -100)">
+      <!-- Entity Circle -->
+      <circle cx="0" cy="0" r="30" fill="url(#entityGradient)" stroke="#00D4FF" stroke-width="2"/>
+      
+      <!-- Icon: Checkmark -->
+      <path d="M-8 0 L-3 5 L8 -5" fill="none" stroke="#00D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#F8F9FA">
+        SENTINEL-01
+      </text>
+      <text x="0" y="17" text-anchor="middle" font-size="7" fill="#00D4FF">
+        Guard Post
+      </text>
+      
+      <!-- Status Badge -->
+      <rect x="-20" y="25" width="40" height="14" rx="4" fill="#00D4FF" opacity="0.2"/>
+      <text x="0" y="32" text-anchor="middle" font-size="8" fill="#00D4FF">VERIFIED</text>
+      
+      <!-- Scan Line to Target -->
+      <line x1="0" y1="0" x2="150" y2="100" stroke="#00D4FF" stroke-width="0.5" stroke-dasharray="2,1"/>
+    </g>
+    
+    <!-- Target 2: Reported -->
+    <g id="target2" transform="translate(-150, 100)">
+      <!-- Entity Circle -->
+      <circle cx="0" cy="0" r="30" fill="url(#entityGradient)" stroke="#6366F1" stroke-width="2"/>
+      
+      <!-- Icon: Triangle -->
+      <path d="M-8 -8 L0 8 L8 -8 Z" fill="#6366F1" opacity="0.8"/>
+      <path d="M-8 -8 L0 8 L8 -8 Z" fill="none" stroke="#6366F1" stroke-width="1"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#F8F9FA">
+        OBSERVER-05
+      </text>
+      <text x="0" y="17" text-anchor="middle" font-size="7" fill="#6366F1">
+        Watchtower
+      </text>
+      
+      <!-- Status Badge -->
+      <rect x="-20" y="25" width="40" height="14" rx="4" fill="#6366F1" opacity="0.2"/>
+      <text x="0" y="32" text-anchor="middle" font-size="8" fill="#6366F1">REPORTED</text>
+      
+      <!-- Scan Line to Target -->
+      <line x1="0" y1="0" x2="100" y2="-100" stroke="#00D4FF" stroke-width="0.5" stroke-dasharray="2,1"/>
+    </g>
+    
+    <!-- Target 3: Pending -->
+    <g id="target3" transform="translate(150, 100)">
+      <!-- Entity Circle -->
+      <circle cx="0" cy="0" r="30" fill="url(#entityGradient)" stroke="#D4AF37" stroke-width="2"/>
+      
+      <!-- Icon: Hourglass -->
+      <rect x="-6" y="-8" width="12" height="16" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+      <line x1="-6" y1="0" x2="6" y2="0" stroke="#D4AF37" stroke-width="1.5"/>
+      <rect x="-4" y="-10" width="8" height="4" fill="#D4AF37" opacity="0.8"/>
+      <rect x="-4" y="6" width="8" height="4" fill="#D4AF37" opacity="0.8"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#F8F9FA">
+        RELAY-03
+      </text>
+      <text x="0" y="17" text-anchor="middle" font-size="7" fill="#D4AF37">
+        Data Node
+      </text>
+      
+      <!-- Status Badge -->
+      <rect x="-20" y="25" width="40" height="14" rx="4" fill="#D4AF37" opacity="0.2"/>
+      <text x="0" y="32" text-anchor="middle" font-size="8" fill="#D4AF37">PENDING</text>
+      
+      <!-- Scan Line to Target -->
+      <line x1="0" y1="0" x2="-100" y2="-100" stroke="#00D4FF" stroke-width="0.5" stroke-dasharray="2,1"/>
+    </g>
+    
+    <!-- Target 4: Blocked -->
+    <g id="target4" transform="translate(250, -100)">
+      <!-- Entity Circle -->
+      <circle cx="0" cy="0" r="30" fill="url(#entityGradient)" stroke="#EF4444" stroke-width="2"/>
+      
+      <!-- Icon: X -->
+      <line x1="-8" y1="-8" x2="8" y2="8" stroke="#EF4444" stroke-width="2"/>
+      <line x1="-8" y1="8" x2="8" y2="-8" stroke="#EF4444" stroke-width="2"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#F8F9FA">
+        INTRUDER-01
+      </text>
+      <text x="0" y="17" text-anchor="middle" font-size="7" fill="#EF4444">
+        Threat
+      </text>
+      
+      <!-- Status Badge -->
+      <rect x="-20" y="25" width="40" height="14" rx="4" fill="#EF4444" opacity="0.2"/>
+      <text x="0" y="32" text-anchor="middle" font-size="8" fill="#EF4444">BLOCKED</text>
+      
+      <!-- Scan Line to Target (Blocked) -->
+      <line x1="0" y1="0" x2="-150" y2="100" stroke="#EF4444" stroke-width="0.5" stroke-dasharray="2,1"/>
+    </g>
+    
+    <!-- Target 5: Failed -->
+    <g id="target5" transform="translate(0, 250)">
+      <!-- Entity Circle -->
+      <circle cx="0" cy="0" r="30" fill="url(#entityGradient)" stroke="#7C2D12" stroke-width="2"/>
+      
+      <!-- Icon: Warning -->
+      <path d="M0 -8 L0 8" stroke="#7C2D12" stroke-width="2"/>
+      <path d="M0 8 L-4 -4 L4 -4 Z" fill="#7C2D12" stroke="none"/>
+      <circle cx="0" cy="-4" r="1" fill="#7C2D12"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#F8F9FA">
+        ARCHIVIST-07
+      </text>
+      <text x="0" y="17" text-anchor="middle" font-size="7" fill="#7C2D12">
+        Audit Trail
+      </text>
+      
+      <!-- Status Badge -->
+      <rect x="-20" y="25" width="40" height="14" rx="4" fill="#7C2D12" opacity="0.2"/>
+      <text x="0" y="32" text-anchor="middle" font-size="8" fill="#7C2D12">FAILED</text>
+      
+      <!-- Scan Line to Target -->
+      <line x1="0" y1="0" x2="0" y2="-150" stroke="#00D4FF" stroke-width="0.5" stroke-dasharray="2,1"/>
+    </g>
+    
+    <!-- Scan Progress Indicators -->
+    <g id="scanProgress">
+      <!-- Progress Ring -->
+      <circle cx="0" cy="0" r="50" fill="none" stroke="#00D4FF" stroke-width="3" stroke-dasharray="314, 314" 
+              stroke-linecap="round" transform="rotate(-90)">
+        <animate attributeName="stroke-dasharray" values="0,314; 314,0" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Progress Text -->
+      <text x="0" y="-60" text-anchor="middle" font-size="14" font-weight="bold" fill="#00D4FF">
+        SCANNING
+      </text>
+      <text x="0" y="-45" text-anchor="middle" font-size="10" fill="#00D4FF">
+        5 Entities Detected
+      </text>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 550)">
+    <text x="0" y="0" font-size="12" font-weight="bold" fill="#00D4FF">LEGEND:</text>
+    
+    <g transform="translate(0, 20)">
+      <circle cx="10" cy="0" r="8" fill="url(#entityGradient)" stroke="#00D4FF" stroke-width="1.5"/>
+      <text x="25" y="5" font-size="10" fill="#F8F9FA">Verified Entity</text>
+    </g>
+    
+    <g transform="translate(0, 40)">
+      <circle cx="10" cy="0" r="8" fill="url(#entityGradient)" stroke="#6366F1" stroke-width="1.5"/>
+      <text x="25" y="5" font-size="10" fill="#F8F9FA">Reported Entity</text>
+    </g>
+    
+    <g transform="translate(0, 60)">
+      <circle cx="10" cy="0" r="8" fill="url(#entityGradient)" stroke="#D4AF37" stroke-width="1.5"/>
+      <text x="25" y="5" font-size="10" fill="#F8F9FA">Pending Entity</text>
+    </g>
+    
+    <g transform="translate(250, 20)">
+      <circle cx="10" cy="0" r="8" fill="url(#entityGradient)" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="25" y="5" font-size="10" fill="#F8F9FA">Blocked Entity</text>
+    </g>
+    
+    <g transform="translate(250, 40)">
+      <circle cx="10" cy="0" r="8" fill="url(#entityGradient)" stroke="#7C2D12" stroke-width="1.5"/>
+      <text x="25" y="5" font-size="10" fill="#F8F9FA">Failed Entity</text>
+    </g>
+    
+    <g transform="translate(500, 20)">
+      <circle cx="10" cy="0" r="15" fill="none" stroke="#00D4FF" stroke-width="1"/>
+      <text x="30" y="5" font-size="10" fill="#00D4FF">Scan Origin</text>
+    </g>
+    
+    <g transform="translate(500, 40)">
+      <line x1="0" y1="0" x2="40" y2="0" stroke="#00D4FF" stroke-width="0.5" stroke-dasharray="2,1"/>
+      <text x="50" y="5" font-size="10" fill="#00D4FF">Scan Line</text>
+    </g>
+    
+    <g transform="translate(500, 60)">
+      <line x1="0" y1="0" x2="40" y2="0" stroke="#EF4444" stroke-width="0.5" stroke-dasharray="2,1"/>
+      <text x="50" y="5" font-size="10" fill="#EF4444">Blocked Scan</text>
+    </g>
+    
+    <g transform="translate(650, 20)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#00D4FF" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#00D4FF">VERIFIED</text>
+    </g>
+    
+    <g transform="translate(650, 40)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#6366F1" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#6366F1">REPORTED</text>
+    </g>
+    
+    <g transform="translate(650, 60)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#D4AF37" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#D4AF37">PENDING</text>
+    </g>
+    
+    <g transform="translate(750, 20)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#EF4444" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#EF4444">BLOCKED</text>
+    </g>
+    
+    <g transform="translate(750, 40)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#7C2D12" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#7C2D12">FAILED</text>
+    </g>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Governance Diagram - Security Scanning</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Template for security scanning diagrams with holographic core, scan rings, target entities, and status indicators.
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Color Definitions -->
+    <linearGradient id="boundaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#0099CC"/>
+    </linearGradient>
+    
+    <linearGradient id="entityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    
+    <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    
+    <!-- Filter for glow -->
+    <filter id="boundaryGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- Background Pattern -->
+    <pattern id="boundaryGrid" patternUnits="userSpaceOnUse" width="30" height="30">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00D4FF" stroke-width="0.3" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0A0A0F"/>
+  <rect width="800" height="600" fill="url(#boundaryGrid)"/>
+  
+  <!-- Diagram Title -->
+  <g id="diagramTitle">
+    <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#00D4FF">
+      IDENTITY & ROLE BOUNDARIES
+    </text>
+    <text x="400" y="50" text-anchor="middle" font-size="14" fill="#6366F1">
+      Fisk Dimension × Omega-9
+    </text>
+  </g>
+  
+  <!-- Main Diagram -->
+  <g id="boundariesDiagram" transform="translate(400, 120)">
+    
+    <!-- Central Sovereign Boundary -->
+    <g id="sovereignBoundary">
+      <!-- Outer Circle -->
+      <circle cx="0" cy="0" r="200" fill="none" stroke="#00D4FF" stroke-width="2" 
+              filter="url(#boundaryGlow)"/>
+      
+      <!-- Inner Circle (subtle) -->
+      <circle cx="0" cy="0" r="180" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.5"/>
+      
+      <!-- Boundary Label -->
+      <text x="0" y="-190" text-anchor="middle" font-size="12" font-weight="bold" fill="#00D4FF">
+        SOVEREIGN BOUNDARY
+      </text>
+      
+      <!-- Status Indicator -->
+      <circle cx="0" cy="-170" r="6" fill="#00D4FF"/>
+      <text x="12" y="-167" font-size="10" fill="#00D4FF">VERIFIED</text>
+    </g>
+    
+    <!-- Central Entity: King Nexus -->
+    <g id="centralEntity">
+      <!-- Entity Circle -->
+      <circle cx="0" cy="0" r="40" fill="url(#entityGradient)" stroke="#D4AF37" stroke-width="3"/>
+      
+      <!-- Crown Icon -->
+      <path d="M-15 -40 L-5 -50 L5 -50 L15 -40 Q20 -35 15 -30 L5 -30 L-5 -30 L-15 -30 Q-20 -35 -15 -40 Z" 
+            fill="#D4AF37" stroke="#B8860B" stroke-width="0.5"/>
+      <circle cx="0" cy="-35" r="3" fill="#1E3A8A"/>
+      <circle cx="0" cy="-35" r="1" fill="#00D4FF"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="14" font-weight="bold" fill="#F8F9FA">
+        KING NEXUS
+      </text>
+      <text x="0" y="20" text-anchor="middle" font-size="10" fill="#00D4FF">
+        Sovereign
+      </text>
+    </g>
+    
+    <!-- Command Boundaries (4 quadrants) -->
+    
+    <!-- Top-Left: Security Command -->
+    <g id="securityBoundary" transform="translate(-250, -150)">
+      <!-- Boundary Circle -->
+      <circle cx="0" cy="0" r="120" fill="none" stroke="#6366F1" stroke-width="1.5" 
+              stroke-dasharray="4,2"/>
+      
+      <!-- Boundary Label -->
+      <text x="0" y="-110" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366F1">
+        SECURITY COMMAND
+      </text>
+      
+      <!-- Entity -->
+      <circle cx="0" cy="0" r="30" fill="url(#entityGradient)" stroke="#6366F1" stroke-width="2"/>
+      
+      <!-- Icon: Shield -->
+      <path d="M-10 -6 Q-14 0 -10 6 Q0 12 10 6 Q14 0 10 -6 Q0 -12 -10 -6 Z" 
+            fill="none" stroke="#6366F1" stroke-width="1.5"/>
+      <line x1="-5" y1="-3" x2="5" y2="-3" stroke="#6366F1" stroke-width="1.5"/>
+      <line x1="0" y1="-6" x2="0" y2="6" stroke="#6366F1" stroke-width="1.5"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#F8F9FA">
+        SENTINEL
+      </text>
+      <text x="0" y="16" text-anchor="middle" font-size="7" fill="#6366F1">
+        Guard
+      </text>
+      
+      <!-- Status -->
+      <rect x="-18" y="25" width="36" height="12" rx="3" fill="#00D4FF" opacity="0.2"/>
+      <text x="0" y="31" text-anchor="middle" font-size="6" fill="#00D4FF">VERIFIED</text>
+    </g>
+    
+    <!-- Top-Right: Execution Command -->
+    <g id="executionBoundary" transform="translate(250, -150)">
+      <!-- Boundary Circle -->
+      <circle cx="0" cy="0" r="120" fill="none" stroke="#6366F1" stroke-width="1.5" 
+              stroke-dasharray="4,2"/>
+      
+      <!-- Boundary Label -->
+      <text x="0" y="-110" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366F1">
+        EXECUTION COMMAND
+      </text>
+      
+      <!-- Entity -->
+      <circle cx="0" cy="0" r="30" fill="url(#entityGradient)" stroke="#6366F1" stroke-width="2"/>
+      
+      <!-- Icon: Sword -->
+      <path d="M0 -12 L0 12" stroke="#6366F1" stroke-width="2"/>
+      <path d="M-6 -8 L6 -8 L6 -3 Q8 -1 6 1 Q4 3 6 3 L6 8" 
+            fill="none" stroke="#6366F1" stroke-width="1.5"/>
+      <path d="M-6 -8 L-6 -3 Q-8 -1 -6 1 Q-4 3 -6 3 L-6 8" 
+            fill="none" stroke="#6366F1" stroke-width="1.5"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#F8F9FA">
+        EXECUTOR
+      </text>
+      <text x="0" y="16" text-anchor="middle" font-size="7" fill="#6366F1">
+        Strike
+      </text>
+      
+      <!-- Status -->
+      <rect x="-18" y="25" width="36" height="12" rx="3" fill="#D4AF37" opacity="0.2"/>
+      <text x="0" y="31" text-anchor="middle" font-size="6" fill="#D4AF37">PENDING</text>
+    </g>
+    
+    <!-- Bottom-Left: Intelligence Command -->
+    <g id="intelligenceBoundary" transform="translate(-250, 150)">
+      <!-- Boundary Circle -->
+      <circle cx="0" cy="0" r="120" fill="none" stroke="#6366F1" stroke-width="1.5" 
+              stroke-dasharray="4,2"/>
+      
+      <!-- Boundary Label -->
+      <text x="0" y="-110" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366F1">
+        INTELLIGENCE COMMAND
+      </text>
+      
+      <!-- Entity -->
+      <circle cx="0" cy="0" r="30" fill="url(#entityGradient)" stroke="#6366F1" stroke-width="2"/>
+      
+      <!-- Icon: Eye -->
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#6366F1" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="4" fill="#6366F1"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#F8F9FA">
+        OBSERVER
+      </text>
+      <text x="0" y="16" text-anchor="middle" font-size="7" fill="#6366F1">
+        Watch
+      </text>
+      
+      <!-- Status -->
+      <rect x="-18" y="25" width="36" height="12" rx="3" fill="#00D4FF" opacity="0.2"/>
+      <text x="0" y="31" text-anchor="middle" font-size="6" fill="#00D4FF">VERIFIED</text>
+    </g>
+    
+    <!-- Bottom-Right: Governance Command -->
+    <g id="governanceBoundary" transform="translate(250, 150)">
+      <!-- Boundary Circle -->
+      <circle cx="0" cy="0" r="120" fill="none" stroke="#6366F1" stroke-width="1.5" 
+              stroke-dasharray="4,2"/>
+      
+      <!-- Boundary Label -->
+      <text x="0" y="-110" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366F1">
+        GOVERNANCE COMMAND
+      </text>
+      
+      <!-- Entity -->
+      <circle cx="0" cy="0" r="30" fill="url(#entityGradient)" stroke="#6366F1" stroke-width="2"/>
+      
+      <!-- Icon: Scale -->
+      <path d="M-12 0 L12 0" stroke="#6366F1" stroke-width="2"/>
+      <path d="M-8 -4 L-12 0 L-8 4" fill="none" stroke="#6366F1" stroke-width="1.5"/>
+      <path d="M8 -4 L12 0 L8 4" fill="none" stroke="#6366F1" stroke-width="1.5"/>
+      <line x1="-4" y1="-8" x2="4" y2="-8" stroke="#6366F1" stroke-width="1"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#F8F9FA">
+        GOVERNOR
+      </text>
+      <text x="0" y="16" text-anchor="middle" font-size="7" fill="#6366F1">
+        Rule
+      </text>
+      
+      <!-- Status -->
+      <rect x="-18" y="25" width="36" height="12" rx="3" fill="#6366F1" opacity="0.2"/>
+      <text x="0" y="31" text-anchor="middle" font-size="6" fill="#6366F1">REPORTED</text>
+    </g>
+    
+    <!-- Connections (Dashed Lines) -->
+    <g id="connections">
+      <!-- Sovereign to Command Centers -->
+      <line x1="0" y1="-40" x2="-250" y2="-125" stroke="#00D4FF" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="0" y1="-40" x2="250" y2="-125" stroke="#00D4FF" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="0" y1="40" x2="-250" y2="125" stroke="#00D4FF" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="0" y1="40" x2="250" y2="125" stroke="#00D4FF" stroke-width="1" stroke-dasharray="3,2"/>
+    </g>
+    
+    <!-- External Entity (Outside Sovereign Boundary) -->
+    <g id="externalEntity" transform="translate(350, -300)">
+      <!-- Entity Circle -->
+      <circle cx="0" cy="0" r="25" fill="#1E3A8A" stroke="#EF4444" stroke-width="2"/>
+      
+      <!-- Icon: Warning -->
+      <path d="M0 -8 L0 8" stroke="#EF4444" stroke-width="2"/>
+      <path d="M0 8 L-4 -4 L4 -4 Z" fill="#EF4444" stroke="none"/>
+      <circle cx="0" cy="-4" r="1" fill="#EF4444"/>
+      
+      <!-- Label -->
+      <text x="0" y="5" text-anchor="middle" font-size="9" font-weight="bold" fill="#F8F9FA">
+        INTRUDER
+      </text>
+      
+      <!-- Status -->
+      <rect x="-20" y="18" width="40" height="12" rx="3" fill="#EF4444" opacity="0.2"/>
+      <text x="0" y="24" text-anchor="middle" font-size="6" fill="#EF4444">BLOCKED</text>
+      
+      <!-- Connection to Sovereign Boundary -->
+      <line x1="0" y1="-25" x2="-100" y2="-200" stroke="#EF4444" stroke-width="1" stroke-dasharray="2,2"/>
+      <line x1="-100" y1="-200" x2="-100" y2="-180" stroke="#EF4444" stroke-width="1"/>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 550)">
+    <text x="0" y="0" font-size="12" font-weight="bold" fill="#00D4FF">LEGEND:</text>
+    
+    <g transform="translate(0, 20)">
+      <circle cx="10" cy="0" r="15" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+      <text x="30" y="5" font-size="10" fill="#F8F9FA">Sovereign Boundary</text>
+    </g>
+    
+    <g transform="translate(0, 40)">
+      <circle cx="10" cy="0" r="12" fill="none" stroke="#6366F1" stroke-width="1" stroke-dasharray="3,1"/>
+      <text x="30" y="5" font-size="10" fill="#F8F9FA">Command Boundary</text>
+    </g>
+    
+    <g transform="translate(0, 60)">
+      <circle cx="10" cy="0" r="8" fill="url(#entityGradient)" stroke="#6366F1" stroke-width="1"/>
+      <text x="30" y="5" font-size="10" fill="#F8F9FA">Entity</text>
+    </g>
+    
+    <g transform="translate(250, 20)">
+      <line x1="0" y1="0" x2="40" y2="0" stroke="#00D4FF" stroke-width="1" stroke-dasharray="2,1"/>
+      <text x="50" y="5" font-size="10" fill="#00D4FF">Boundary Connection</text>
+    </g>
+    
+    <g transform="translate(250, 40)">
+      <line x1="0" y1="0" x2="40" y2="0" stroke="#EF4444" stroke-width="1" stroke-dasharray="2,1"/>
+      <text x="50" y="5" font-size="10" fill="#EF4444">Blocked Connection</text>
+    </g>
+    
+    <g transform="translate(500, 20)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#00D4FF" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#00D4FF">VERIFIED</text>
+    </g>
+    
+    <g transform="translate(500, 40)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#6366F1" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#6366F1">REPORTED</text>
+    </g>
+    
+    <g transform="translate(500, 60)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#D4AF37" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#D4AF37">PENDING</text>
+    </g>
+    
+    <g transform="translate(650, 20)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#EF4444" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#EF4444">BLOCKED</text>
+    </g>
+    
+    <g transform="translate(650, 40)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#7C2D12" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#7C2D12">FAILED</text>
+    </g>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Governance Diagram - Identity & Role Boundaries</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Template for identity and role boundary diagrams with concentric circles, status indicators, and dashed connection lines.
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

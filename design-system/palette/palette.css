@@ -1,0 +1,332 @@
+/* FISK DIMENSION × OMEGA-9 — Canonical Color System */
+/* Version: 1.0.0 */
+
+:root {
+  /* ===== PRIMARY PALETTE ===== */
+  
+  /* Obsidian Black - Primary backgrounds, deep surfaces */
+  --fisk-obsidian: #0A0A0F;
+  --fisk-obsidian-rgb: 10, 10, 15;
+  --fisk-obsidian-hsl: 240, 20%, 5%;
+  
+  /* Midnight Navy - Secondary backgrounds, panels */
+  --fisk-navy: #0F172A;
+  --fisk-navy-rgb: 15, 23, 42;
+  --fisk-navy-hsl: 220, 48%, 11%;
+  
+  /* Ice White - Primary text, surfaces */
+  --fisk-ice: #F8F9FA;
+  --fisk-ice-rgb: 248, 249, 250;
+  --fisk-ice-hsl: 210, 20%, 98%;
+  
+  /* Electric Cyan - Primary accents, connectors, verified states */
+  --fisk-cyan: #00D4FF;
+  --fisk-cyan-rgb: 0, 212, 255;
+  --fisk-cyan-hsl: 190, 100%, 50%;
+  --fisk-cyan-80: rgba(0, 212, 255, 0.8);
+  --fisk-cyan-50: rgba(0, 212, 255, 0.5);
+  --fisk-cyan-30: rgba(0, 212, 255, 0.3);
+  --fisk-cyan-20: rgba(0, 212, 255, 0.2);
+  --fisk-cyan-10: rgba(0, 212, 255, 0.1);
+  --fisk-cyan-5: rgba(0, 212, 255, 0.05);
+  
+  /* Deep Sapphire - Secondary accents, depth */
+  --fisk-sapphire: #1E3A8A;
+  --fisk-sapphire-rgb: 30, 58, 138;
+  --fisk-sapphire-hsl: 220, 65%, 33%;
+  --fisk-sapphire-80: rgba(30, 58, 138, 0.8);
+  --fisk-sapphire-50: rgba(30, 58, 138, 0.5);
+  
+  /* Restrained Violet - Tertiary accents, highlights */
+  --fisk-violet: #6366F1;
+  --fisk-violet-rgb: 99, 102, 241;
+  --fisk-violet-hsl: 238, 84%, 67%;
+  --fisk-violet-80: rgba(99, 102, 241, 0.8);
+  --fisk-violet-50: rgba(99, 102, 241, 0.5);
+  
+  /* Antique Gold - Metallic details, crowns, borders */
+  --fisk-gold: #D4AF37;
+  --fisk-gold-rgb: 212, 175, 55;
+  --fisk-gold-hsl: 45, 64%, 52%;
+  --fisk-gold-80: rgba(212, 175, 55, 0.8);
+  --fisk-gold-50: rgba(212, 175, 55, 0.5);
+  --fisk-gold-30: rgba(212, 175, 55, 0.3);
+  
+  /* ===== GOVERNANCE PALETTE ===== */
+  /* For documents and presentation infographics only */
+  
+  --fisk-ivory: #FFFFF0;
+  --fisk-ivory-rgb: 255, 255, 240;
+  
+  --fisk-pale-blue: #E0F2FE;
+  --fisk-pale-blue-rgb: 224, 242, 254;
+  
+  /* ===== SEMANTIC STATES ===== */
+  
+  /* Verified - Confirmed, audited, secure */
+  --fisk-verified: #00D4FF;
+  --fisk-verified-secondary: #0099CC;
+  --fisk-verified-bg: rgba(0, 212, 255, 0.1);
+  
+  /* Reported - User-submitted, unconfirmed */
+  --fisk-reported: #6366F1;
+  --fisk-reported-secondary: #4F46E5;
+  --fisk-reported-bg: rgba(99, 102, 241, 0.1);
+  
+  /* Pending - In progress, awaiting */
+  --fisk-pending: #D4AF37;
+  --fisk-pending-secondary: #B8860B;
+  --fisk-pending-bg: rgba(212, 175, 55, 0.1);
+  
+  /* Blocked - Denied, restricted */
+  --fisk-blocked: #EF4444;
+  --fisk-blocked-secondary: #DC2626;
+  --fisk-blocked-bg: rgba(239, 68, 68, 0.1);
+  
+  /* Failed - Error, broken, invalid */
+  --fisk-failed: #7C2D12;
+  --fisk-failed-secondary: #591F0A;
+  --fisk-failed-bg: rgba(124, 45, 18, 0.1);
+  
+  /* ===== GRADIENTS ===== */
+  
+  /* Celestial - Hero sections, cosmic backgrounds */
+  --fisk-gradient-celestial: linear-gradient(to bottom right, #0F172A, #1E3A8A);
+  
+  /* Holographic - Intelligence motifs, active states */
+  --fisk-gradient-holographic: linear-gradient(to right, #00D4FF, #6366F1);
+  
+  /* Gold Glow - Metallic highlights, crown effects */
+  --fisk-gradient-gold-glow: radial-gradient(circle, #D4AF37, #F4E48C);
+  
+  /* Cyan Pulse - Signal rings, active indicators */
+  --fisk-gradient-cyan-pulse: radial-gradient(circle, #00D4FF, transparent);
+  
+  /* ===== BORDER WIDTHS ===== */
+  --fisk-border-connector: 1px;
+  --fisk-border-standard: 2px;
+  --fisk-border-emphasis: 3px;
+  --fisk-border-heavy: 4px;
+  
+  /* ===== BORDER RADIUS ===== */
+  --fisk-radius-sharp: 2px;
+  --fisk-radius-subtle: 4px;
+  --fisk-radius-standard: 8px;
+  --fisk-radius-soft: 16px;
+  
+  /* ===== SPACING ===== */
+  --fisk-space-xs: 4px;
+  --fisk-space-sm: 8px;
+  --fisk-space-md: 16px;
+  --fisk-space-lg: 24px;
+  --fisk-space-xl: 32px;
+  --fisk-space-2xl: 48px;
+  --fisk-space-3xl: 64px;
+  --fisk-space-4xl: 96px;
+  --fisk-space-5xl: 128px;
+  
+  /* ===== SHADOWS ===== */
+  --fisk-shadow-sm: 0 2px 4px rgba(0, 212, 255, 0.1);
+  --fisk-shadow-md: 0 4px 16px rgba(0, 212, 255, 0.1);
+  --fisk-shadow-lg: 0 8px 32px rgba(0, 212, 255, 0.1);
+  --fisk-shadow-gold: 0 4px 16px rgba(212, 175, 55, 0.2);
+  
+  /* ===== TYPOGRAPHY ===== */
+  --fisk-font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fisk-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Font weights */
+  --fisk-font-light: 300;
+  --fisk-font-regular: 400;
+  --fisk-font-medium: 500;
+  --fisk-font-semibold: 600;
+  --fisk-font-bold: 700;
+  
+  /* Font sizes */
+  --fisk-text-caption: 12px;
+  --fisk-text-sm: 14px;
+  --fisk-text-base: 16px;
+  --fisk-text-lg: 18px;
+  --fisk-text-xl: 20px;
+  --fisk-text-2xl: 24px;
+  --fisk-text-3xl: 32px;
+  --fisk-text-4xl: 48px;
+  --fisk-text-5xl: 64px;
+  
+  /* Line heights */
+  --fisk-lead-none: 1;
+  --fisk-lead-tight: 1.25;
+  --fisk-lead-normal: 1.5;
+  --fisk-lead-relaxed: 1.75;
+  
+  /* ===== TRANSITIONS ===== */
+  --fisk-transition-fast: 150ms ease;
+  --fisk-transition-normal: 250ms ease;
+  --fisk-transition-slow: 350ms ease;
+  
+  /* ===== Z-INDEX SCALE ===== */
+  --fisk-z-dropdown: 100;
+  --fisk-z-sticky: 200;
+  --fisk-z-modal: 300;
+  --fisk-z-tooltip: 400;
+  --fisk-z-notification: 500;
+}
+
+/* ===== DARK MODE (Default) ===== */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* In light mode, adjust for contrast */
+    --fisk-ice: #0A0A0F;
+    --fisk-obsidian: #F8F9FA;
+    --fisk-navy: #E0F2FE;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Text colors */
+.fisk-text-obsidian { color: var(--fisk-obsidian); }
+.fisk-text-navy { color: var(--fisk-navy); }
+.fisk-text-ice { color: var(--fisk-ice); }
+.fisk-text-cyan { color: var(--fisk-cyan); }
+.fisk-text-sapphire { color: var(--fisk-sapphire); }
+.fisk-text-violet { color: var(--fisk-violet); }
+.fisk-text-gold { color: var(--fisk-gold); }
+
+/* Background colors */
+.fisk-bg-obsidian { background-color: var(--fisk-obsidian); }
+.fisk-bg-navy { background-color: var(--fisk-navy); }
+.fisk-bg-ice { background-color: var(--fisk-ice); }
+.fisk-bg-cyan { background-color: var(--fisk-cyan); }
+.fisk-bg-sapphire { background-color: var(--fisk-sapphire); }
+.fisk-bg-violet { background-color: var(--fisk-violet); }
+.fisk-bg-gold { background-color: var(--fisk-gold); }
+
+/* Border colors */
+.fisk-border-obsidian { border-color: var(--fisk-obsidian); }
+.fisk-border-navy { border-color: var(--fisk-navy); }
+.fisk-border-ice { border-color: var(--fisk-ice); }
+.fisk-border-cyan { border-color: var(--fisk-cyan); }
+.fisk-border-sapphire { border-color: var(--fisk-sapphire); }
+.fisk-border-violet { border-color: var(--fisk-violet); }
+.fisk-border-gold { border-color: var(--fisk-gold); }
+
+/* Status colors */
+.fisk-verified { color: var(--fisk-verified); }
+.fisk-verified-bg { background-color: var(--fisk-verified-bg); }
+.fisk-reported { color: var(--fisk-reported); }
+.fisk-reported-bg { background-color: var(--fisk-reported-bg); }
+.fisk-pending { color: var(--fisk-pending); }
+.fisk-pending-bg { background-color: var(--fisk-pending-bg); }
+.fisk-blocked { color: var(--fisk-blocked); }
+.fisk-blocked-bg { background-color: var(--fisk-blocked-bg); }
+.fisk-failed { color: var(--fisk-failed); }
+.fisk-failed-bg { background-color: var(--fisk-failed-bg); }
+
+/* Gradients */
+.fisk-gradient-celestial { background: var(--fisk-gradient-celestial); }
+.fisk-gradient-holographic { background: var(--fisk-gradient-holographic); }
+.fisk-gradient-gold-glow { background: var(--fisk-gradient-gold-glow); }
+.fisk-gradient-cyan-pulse { background: var(--fisk-gradient-cyan-pulse); }
+
+/* Shadows */
+.fisk-shadow-sm { box-shadow: var(--fisk-shadow-sm); }
+.fisk-shadow-md { box-shadow: var(--fisk-shadow-md); }
+.fisk-shadow-lg { box-shadow: var(--fisk-shadow-lg); }
+.fisk-shadow-gold { box-shadow: var(--fisk-shadow-gold); }
+
+/* Spacing utilities */
+.fisk-p-xs { padding: var(--fisk-space-xs); }
+.fisk-p-sm { padding: var(--fisk-space-sm); }
+.fisk-p-md { padding: var(--fisk-space-md); }
+.fisk-p-lg { padding: var(--fisk-space-lg); }
+.fisk-p-xl { padding: var(--fisk-space-xl); }
+.fisk-p-2xl { padding: var(--fisk-space-2xl); }
+
+.fisk-m-xs { margin: var(--fisk-space-xs); }
+.fisk-m-sm { margin: var(--fisk-space-sm); }
+.fisk-m-md { margin: var(--fisk-space-md); }
+.fisk-m-lg { margin: var(--fisk-space-lg); }
+.fisk-m-xl { margin: var(--fisk-space-xl); }
+
+/* Border radius utilities */
+.fisk-rounded-sharp { border-radius: var(--fisk-radius-sharp); }
+.fisk-rounded-subtle { border-radius: var(--fisk-radius-subtle); }
+.fisk-rounded-standard { border-radius: var(--fisk-radius-standard); }
+.fisk-rounded-soft { border-radius: var(--fisk-radius-soft); }
+
+/* Border width utilities */
+.fisk-border-connector { border-width: var(--fisk-border-connector); }
+.fisk-border-standard { border-width: var(--fisk-border-standard); }
+.fisk-border-emphasis { border-width: var(--fisk-border-emphasis); }
+.fisk-border-heavy { border-width: var(--fisk-border-heavy); }
+
+/* Typography utilities */
+.fisk-font-primary { font-family: var(--fisk-font-primary); }
+.fisk-font-mono { font-family: var(--fisk-font-mono); }
+
+.fisk-text-caption { font-size: var(--fisk-text-caption); }
+.fisk-text-sm { font-size: var(--fisk-text-sm); }
+.fisk-text-base { font-size: var(--fisk-text-base); }
+.fisk-text-lg { font-size: var(--fisk-text-lg); }
+.fisk-text-xl { font-size: var(--fisk-text-xl); }
+.fisk-text-2xl { font-size: var(--fisk-text-2xl); }
+
+.fisk-font-light { font-weight: var(--fisk-font-light); }
+.fisk-font-regular { font-weight: var(--fisk-font-regular); }
+.fisk-font-medium { font-weight: var(--fisk-font-medium); }
+.fisk-font-semibold { font-weight: var(--fisk-font-semibold); }
+.fisk-font-bold { font-weight: var(--fisk-font-bold); }
+
+/* Flex utilities for common patterns */
+.fisk-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fisk-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fisk-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Panel styles */
+.fisk-panel-primary {
+  background: var(--fisk-navy);
+  border: var(--fisk-border-standard) solid var(--fisk-cyan);
+  border-radius: var(--fisk-radius-standard);
+  padding: var(--fisk-space-lg);
+  box-shadow: var(--fisk-shadow-md);
+}
+
+.fisk-panel-secondary {
+  background: var(--fisk-obsidian);
+  border: var(--fisk-border-standard) solid var(--fisk-sapphire);
+  opacity: 0.5;
+  border-radius: var(--fisk-radius-subtle);
+  padding: var(--fisk-space-md);
+}
+
+/* Connector line style */
+.fisk-connector {
+  stroke: var(--fisk-cyan);
+  stroke-width: var(--fisk-border-connector);
+  fill: none;
+}
+
+/* Status indicator base */
+.fisk-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--fisk-space-sm);
+  padding: var(--fisk-space-xs) var(--fisk-space-sm);
+  border-radius: var(--fisk-radius-subtle);
+  font-size: var(--fisk-text-sm);
+  font-weight: var(--fisk-font-medium);
+}

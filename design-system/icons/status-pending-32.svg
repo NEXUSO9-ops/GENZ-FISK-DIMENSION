@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="pendingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Pending Status: Hourglass (32px) -->
+  <g id="statusPending">
+    <!-- Hourglass Outline -->
+    <path d="M13 5 L19 5 L19 10 L13 10 Z" 
+          fill="none" 
+          stroke="#D4AF37" 
+          stroke-width="2.5"/>
+    <path d="M13 27 L19 27 L19 22 L13 22 Z" 
+          fill="none" 
+          stroke="#D4AF37" 
+          stroke-width="2.5"/>
+    <path d="M11 10 L21 10" stroke="#D4AF37" stroke-width="2.5"/>
+    <path d="M11 22 L21 22" stroke="#D4AF37" stroke-width="2.5"/>
+    
+    <!-- Sand (Top) -->
+    <rect x="13.5" y="6" width="8" height="3" fill="#D4AF37" opacity="0.8"/>
+    <rect x="13.5" y="8" width="8" height="1" fill="#D4AF37" opacity="0.6"/>
+    
+    <!-- Sand (Bottom) -->
+    <rect x="13.5" y="23" width="8" height="3" fill="#D4AF37" opacity="0.8"/>
+    <rect x="13.5" y="25" width="8" height="1" fill="#D4AF37" opacity="0.6"/>
+    
+    <!-- Hourglass Frame -->
+    <path d="M13 5 Q11 5 11 10" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M19 5 Q21 5 21 10" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M13 27 Q11 27 11 22" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M19 27 Q21 27 21 22" stroke="#D4AF37" stroke-width="1.5"/>
+    
+    <!-- Central Constriction -->
+    <rect x="14" y="17" width="6" height="2" fill="#D4AF37" opacity="0.4"/>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Status - Pending (32px)</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Pending state indicator: Hourglass. Color: Gold (#D4AF37).
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

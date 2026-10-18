@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <!-- Color Definitions -->
+    <linearGradient id="archGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#F4E48C"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    
+    <radialGradient id="archAtmosphere" cx="50%" cy="0%" r="100%" fx="50%" fy="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0A0A0F"/>
+    </radialGradient>
+    
+    <filter id="archSoftShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#archAtmosphere)"/>
+  
+  <!-- Celestial Arch -->
+  <g id="celestialArch">
+    
+    <!-- Main Arch Curve -->
+    <path d="M50 150 Q100 100 150 80 Q200 60 250 80 Q300 100 300 150" 
+          fill="none" stroke="#D4AF37" stroke-width="4" filter="url(#archSoftShadow)"/>
+    
+    <!-- Arch Inner Detail -->
+    <path d="M70 130 Q120 80 150 60 Q180 40 230 60 Q280 80 280 130" 
+          fill="none" stroke="#F4E48C" stroke-width="2"/>
+    
+    <!-- Arch Outer Border -->
+    <path d="M50 150 Q80 140 100 130 Q120 120 150 110 Q180 100 200 100 Q220 100 250 110 Q280 120 300 150" 
+          fill="none" stroke="#B8860B" stroke-width="1"/>
+    
+    <!-- Arch Medallion -->
+    <circle cx="150" cy="80" r="15" fill="#1E3A8A" stroke="#D4AF37" stroke-width="2"/>
+    <circle cx="150" cy="80" r="10" fill="url(#archGold)" stroke="#B8860B" stroke-width="1"/>
+    <circle cx="150" cy="80" r="5" fill="#00D4FF"/>
+    
+    <!-- Side Ornaments -->
+    <circle cx="100" cy="110" r="6" fill="url(#archGold)" stroke="#B8860B" stroke-width="0.5"/>
+    <circle cx="200" cy="110" r="6" fill="url(#archGold)" stroke="#B8860B" stroke-width="0.5"/>
+    <circle cx="100" cy="110" r="2" fill="#00D4FF"/>
+    <circle cx="200" cy="110" r="2" fill="#00D4FF"/>
+    
+    <!-- Decorative Lines -->
+    <path d="M100 110 L100 100" stroke="#D4AF37" stroke-width="1"/>
+    <path d="M200 110 L200 100" stroke="#D4AF37" stroke-width="1"/>
+    
+    <!-- Base -->
+    <line x1="50" y1="150" x2="300" y2="150" stroke="#D4AF37" stroke-width="2"/>
+    <line x1="60" y1="150" x2="290" y2="150" stroke="#B8860B" stroke-width="1"/>
+    
+    <!-- Base Capitals -->
+    <rect x="45" y="140" width="10" height="10" fill="url(#archGold)" stroke="#B8860B" stroke-width="0.5"/>
+    <rect x="285" y="140" width="10" height="10" fill="url(#archGold)" stroke="#B8860B" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Optional: Volumetric Light -->
+  <ellipse cx="150" cy="100" rx="80" ry="20" fill="#00D4FF" opacity="0.05" 
+           filter="url(#archSoftShadow)"/>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Celestial Arch</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Monumental archway element from the Celestial Throne.
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

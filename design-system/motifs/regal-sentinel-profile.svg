@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Color Definitions -->
+    <linearGradient id="profileManeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F9FA"/>
+      <stop offset="50%" stop-color="#E0E0E0"/>
+      <stop offset="100%" stop-color="#C0C0C0"/>
+    </linearGradient>
+    
+    <radialGradient id="profileEyeGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#0099CC"/>
+    </radialGradient>
+    
+    <linearGradient id="profileCrownGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#F4E48C"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    
+    <filter id="profileSoftShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background (transparent for versatility) -->
+  <rect width="400" height="400" fill="transparent"/>
+  
+  <!-- Lion Profile Silhouette -->
+  <g id="sentinelProfile">
+    
+    <!-- Head and Neck -->
+    <path d="M80 250 Q100 200 140 180 Q180 160 220 170 Q260 180 280 200 Q290 220 280 240 Q260 260 240 260 Q200 260 180 240 Q140 200 120 180 Q80 160 80 200 Q80 220 80 250 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2" filter="url(#profileSoftShadow)"/>
+    
+    <!-- Mane (Geometric Flow) -->
+    <path d="M140 180 Q120 160 100 140 Q80 120 85 100 Q100 80 120 70 Q150 60 180 70 Q200 80 210 100 Q200 120 180 140 Q160 160 140 180 Z"
+          fill="url(#profileManeGradient)" stroke="#A0A0A0" stroke-width="1"/>
+    
+    <path d="M220 170 Q240 150 260 130 Q280 110 290 100 Q300 90 310 100 Q320 110 320 130 Q310 150 290 160 Q270 170 250 180 Q240 190 220 170 Z"
+          fill="url(#profileManeGradient)" stroke="#A0A0A0" stroke-width="1"/>
+    
+    <!-- Ear -->
+    <path d="M140 140 Q130 130 125 110 Q130 100 140 110 Q150 120 140 140 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="1"/>
+    <path d="M135 120 Q130 115 130 105 Q135 100 140 110 Q135 120 Z"
+          fill="#E0E0E0" stroke="none"/>
+    
+    <!-- Eye (Icy Cyan) -->
+    <ellipse cx="220" cy="190" rx="10" ry="8" fill="#0F172A"/>
+    <ellipse cx="220" cy="190" rx="6" ry="4" fill="url(#profileEyeGlow)"/>
+    <circle cx="222" cy="188" r="1.5" fill="#00D4FF"/>
+    <circle cx="220" cy="190" r="2" fill="#0A0A0F"/>
+    
+    <!-- Nose and Mouth -->
+    <path d="M245 220 Q250 225 255 220" stroke="#0F172A" stroke-width="1.5" fill="none"/>
+    <ellipse cx="245" cy="215" rx="3" ry="2" fill="#0F172A"/>
+    
+    <!-- Crown (Antique Gold with Sapphire Jewels) -->
+    <g id="profileCrown">
+      <!-- Crown Base -->
+      <path d="M100 70 Q120 50 160 55 Q200 60 240 55 Q280 50 300 70 Q310 80 300 90 Q280 100 240 105 Q200 110 160 105 Q120 100 100 90 Q90 80 100 70 Z"
+            fill="url(#profileCrownGold)" stroke="#B8860B" stroke-width="1.5"/>
+      
+      <!-- Crown Points -->
+      <path d="M160 55 L170 30 L180 55 Z" fill="url(#profileCrownGold)" stroke="#B8860B" stroke-width="0.5"/>
+      <path d="M200 60 L210 35 L220 60 Z" fill="url(#profileCrownGold)" stroke="#B8860B" stroke-width="0.5"/>
+      <path d="M240 60 L250 35 L260 60 Z" fill="url(#profileCrownGold)" stroke="#B8860B" stroke-width="0.5"/>
+      <path d="M120 60 L130 35 L140 60 Z" fill="url(#profileCrownGold)" stroke="#B8860B" stroke-width="0.5"/>
+      <path d="M80 70 L90 45 L100 70 Z" fill="url(#profileCrownGold)" stroke="#B8860B" stroke-width="0.5"/>
+      
+      <!-- Sapphire Jewels -->
+      <circle cx="170" cy="55" r="4" fill="#1E3A8A"/>
+      <circle cx="210" cy="60" r="4" fill="#1E3A8A"/>
+      <circle cx="250" cy="60" r="4" fill="#1E3A8A"/>
+      <circle cx="130" cy="60" r="4" fill="#1E3A8A"/>
+      <circle cx="90" cy="70" r="4" fill="#1E3A8A"/>
+      
+      <!-- Jewel Highlights -->
+      <circle cx="172" cy="53" r="1" fill="#00D4FF"/>
+      <circle cx="212" cy="58" r="1" fill="#00D4FF"/>
+      <circle cx="252" cy="58" r="1" fill="#00D4FF"/>
+      <circle cx="132" cy="58" r="1" fill="#00D4FF"/>
+      <circle cx="92" cy="67" r="1" fill="#00D4FF"/>
+    </g>
+    
+    <!-- Chest and Body Hint -->
+    <path d="M80 250 Q100 280 140 300 Q180 320 220 310 Q260 300 280 280 Q290 260 280 240 Q260 220 240 220 Q200 220 180 240 Q140 260 120 260 Q80 260 80 250 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Subtle contour lines for depth -->
+    <path d="M140 180 Q160 170 180 160" stroke="#A0A0A0" stroke-width="0.5" fill="none"/>
+    <path d="M200 180 Q220 170 240 180" stroke="#A0A0A0" stroke-width="0.5" fill="none"/>
+    <path d="M160 200 Q180 190 200 200" stroke="#A0A0A0" stroke-width="0.5" fill="none"/>
+  </g>
+  
+  <!-- Holographic Intelligence Accent (subtle) -->
+  <g id="profileHolographic" opacity="0.2">
+    <circle cx="200" cy="150" r="40" stroke="#00D4FF" stroke-width="0.5" fill="none"/>
+    <circle cx="200" cy="150" r="60" stroke="#00D4FF" stroke-width="0.5" fill="none"/>
+    <line x1="160" y1="130" x2="240" y2="130" stroke="#00D4FF" stroke-width="0.3"/>
+    <line x1="160" y1="150" x2="240" y2="150" stroke="#00D4FF" stroke-width="0.3"/>
+    <line x1="160" y1="170" x2="240" y2="170" stroke="#00D4FF" stroke-width="0.3"/>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Regal Sentinel - Profile</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Side profile of the Regal Sentinel lion with crown. 
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

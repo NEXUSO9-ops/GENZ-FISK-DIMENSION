@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="reportedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    
+    <filter id="reportedGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Reported Status: Triangle (point up) - 48px -->
+  <g id="statusReported">
+    <!-- Triangle with glow -->
+    <path d="M24 8 L34 38 L14 38 Z" 
+          fill="url(#reportedGradient)" 
+          stroke="#6366F1" 
+          stroke-width="3" 
+          opacity="0.9" 
+          filter="url(#reportedGlow)"/>
+    
+    <!-- Inner Triangle -->
+    <path d="M24 12 L30 34 L18 34 Z" 
+          fill="none" 
+          stroke="#6366F1" 
+          stroke-width="1.5" 
+          opacity="0.5"/>
+    
+    <!-- Exclamation Mark -->
+    <path d="M24 22 L24 28" 
+          fill="none" 
+          stroke="#F8F9FA" 
+          stroke-width="3.5"/>
+    <circle cx="24" cy="31" r="1.8" fill="#F8F9FA"/>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Status - Reported (48px)</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Reported state indicator: Triangle pointing up. Color: Violet (#6366F1).
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

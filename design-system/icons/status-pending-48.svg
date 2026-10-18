@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="pendingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    
+    <filter id="pendingGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Pending Status: Hourglass (48px) -->
+  <g id="statusPending">
+    <!-- Hourglass Outline with glow -->
+    <path d="M18 8 L26 8 L26 16 L18 16 Z" 
+          fill="none" 
+          stroke="#D4AF37" 
+          stroke-width="3.5" 
+          filter="url(#pendingGlow)"/>
+    <path d="M18 36 L26 36 L26 28 L18 28 Z" 
+          fill="none" 
+          stroke="#D4AF37" 
+          stroke-width="3.5" 
+          filter="url(#pendingGlow)"/>
+    <path d="M16 16 L30 16" stroke="#D4AF37" stroke-width="3.5"/>
+    <path d="M16 28 L30 28" stroke="#D4AF37" stroke-width="3.5"/>
+    
+    <!-- Sand (Top) -->
+    <rect x="18.5" y="9" width="12" height="5" fill="#D4AF37" opacity="0.8"/>
+    <rect x="18.5" y="13" width="12" height="1" fill="#D4AF37" opacity="0.6"/>
+    
+    <!-- Sand (Bottom) -->
+    <rect x="18.5" y="31" width="12" height="5" fill="#D4AF37" opacity="0.8"/>
+    <rect x="18.5" y="35" width="12" height="1" fill="#D4AF37" opacity="0.6"/>
+    
+    <!-- Hourglass Frame -->
+    <path d="M18 8 Q16 8 16 16" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M26 8 Q28 8 28 16" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M18 36 Q16 36 16 28" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M26 36 Q28 36 28 28" stroke="#D4AF37" stroke-width="2"/>
+    
+    <!-- Central Constriction -->
+    <rect x="19" y="24" width="8" height="3" fill="#D4AF37" opacity="0.4"/>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Status - Pending (48px)</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Pending state indicator: Hourglass. Color: Gold (#D4AF37).
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

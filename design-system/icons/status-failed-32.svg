@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="failedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C2D12"/>
+      <stop offset="100%" stop-color="#591F0A"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Failed Status: Circle with X (32px) -->
+  <g id="statusFailed">
+    <!-- Outer Circle -->
+    <circle cx="16" cy="16" r="13" 
+            fill="none" 
+            stroke="#7C2D12" 
+            stroke-width="2"/>
+    
+    <!-- Inner Circle (subtle fill) -->
+    <circle cx="16" cy="16" r="13" 
+            fill="url(#failedGradient)" 
+            opacity="0.1"/>
+    
+    <!-- X Mark -->
+    <path d="M11 11 L21 21" 
+          fill="none" 
+          stroke="#7C2D12" 
+          stroke-width="2.5" 
+          stroke-linecap="round"/>
+    <path d="M21 11 L11 21" 
+          fill="none" 
+          stroke="#7C2D12" 
+          stroke-width="2.5" 
+          stroke-linecap="round"/>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Status - Failed (32px)</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Failed state indicator: Circle with X. Color: Deep Red (#7C2D12).
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FISK DIMENSION × OMEGA-9 — Presentation Template</title>
+  <link rel="stylesheet" href="../palette/palette.css">
+  <style>
+    /* Presentation-specific styles */
+    :root {
+      --presentation-bg: #FFFFF0; /* Ivory */
+      --presentation-surface: #E0F2FE; /* Pale Blue */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--fisk-font-primary);
+      background: var(--presentation-bg);
+      color: var(--fisk-obsidian);
+      line-height: var(--fisk-lead-normal);
+    }
+
+    /* Slide Container */
+    .fisk-presentation {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--fisk-space-2xl);
+    }
+
+    /* Slide */
+    .fisk-slide {
+      background: var(--presentation-surface);
+      border-radius: var(--fisk-radius-standard);
+      padding: var(--fisk-space-3xl);
+      margin-bottom: var(--fisk-space-2xl);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--fisk-cyan-20);
+    }
+
+    /* Title Slide */
+    .fisk-slide-title {
+      text-align: center;
+      padding: var(--fisk-space-4xl) var(--fisk-space-2xl);
+    }
+
+    .fisk-slide-title .fisk-presentation-title {
+      font-size: var(--fisk-text-5xl);
+      font-weight: var(--fisk-font-bold);
+      color: var(--fisk-obsidian);
+      margin-bottom: var(--fisk-space-lg);
+      letter-spacing: -0.02em;
+    }
+
+    .fisk-slide-title .fisk-presentation-subtitle {
+      font-size: var(--fisk-text-2xl);
+      color: var(--fisk-sapphire);
+      margin-bottom: var(--fisk-space-2xl);
+    }
+
+    .fisk-slide-title .fisk-presentation-motif {
+      margin: var(--fisk-space-2xl) auto 0;
+      max-width: 400px;
+    }
+
+    .fisk-slide-title .fisk-presentation-motif svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .fisk-slide-title .fisk-presentation-meta {
+      margin-top: var(--fisk-space-2xl);
+      padding-top: var(--fisk-space-xl);
+      border-top: 1px solid var(--fisk-cyan-20);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--fisk-space-lg);
+      color: var(--fisk-sapphire);
+      font-size: var(--fisk-text-sm);
+    }
+
+    /* Section Slide */
+    .fisk-slide-section {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--fisk-space-2xl);
+      align-items: center;
+    }
+
+    .fisk-slide-section .fisk-section-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--fisk-space-lg);
+    }
+
+    .fisk-slide-section .fisk-section-title {
+      font-size: var(--fisk-text-3xl);
+      font-weight: var(--fisk-font-bold);
+      color: var(--fisk-obsidian);
+      margin-bottom: var(--fisk-space-md);
+    }
+
+    .fisk-slide-section .fisk-section-text {
+      font-size: var(--fisk-text-lg);
+      color: var(--fisk-obsidian);
+      opacity: 0.9;
+    }
+
+    .fisk-slide-section .fisk-section-motif {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fisk-slide-section .fisk-section-motif svg {
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* Content Slide */
+    .fisk-slide-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--fisk-space-lg);
+    }
+
+    .fisk-slide-content .fisk-content-title {
+      font-size: var(--fisk-text-3xl);
+      font-weight: var(--fisk-font-bold);
+      color: var(--fisk-obsidian);
+      margin-bottom: var(--fisk-space-md);
+    }
+
+    .fisk-slide-content .fisk-content-subtitle {
+      font-size: var(--fisk-text-xl);
+      color: var(--fisk-sapphire);
+      margin-bottom: var(--fisk-space-lg);
+    }
+
+    .fisk-slide-content .fisk-content-body {
+      display: flex;
+      flex-direction: column;
+      gap: var(--fisk-space-md);
+    }
+
+    .fisk-slide-content .fisk-content-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--fisk-space-md);
+      padding: var(--fisk-space-md);
+      background: var(--fisk-ivory);
+      border-radius: var(--fisk-radius-subtle);
+      border-left: 3px solid var(--fisk-cyan);
+    }
+
+    .fisk-slide-content .fisk-content-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--fisk-cyan-10);
+      color: var(--fisk-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .fisk-slide-content .fisk-content-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .fisk-slide-content .fisk-content-text {
+      flex: 1;
+    }
+
+    .fisk-slide-content .fisk-content-text-title {
+      font-size: var(--fisk-text-base);
+      font-weight: var(--fisk-font-semibold);
+      color: var(--fisk-obsidian);
+      margin-bottom: var(--fisk-space-xs);
+    }
+
+    .fisk-slide-content .fisk-content-text-description {
+      font-size: var(--fisk-text-sm);
+      color: var(--fisk-obsidian);
+      opacity: 0.8;
+    }
+
+    /* Diagram Slide */
+    .fisk-slide-diagram {
+      display: flex;
+      flex-direction: column;
+      gap: var(--fisk-space-lg);
+      align-items: center;
+      text-align: center;
+    }
+
+    .fisk-slide-diagram .fisk-diagram-title {
+      font-size: var(--fisk-text-3xl);
+      font-weight: var(--fisk-font-bold);
+      color: var(--fisk-obsidian);
+    }
+
+    .fisk-slide-diagram .fisk-diagram-subtitle {
+      font-size: var(--fisk-text-lg);
+      color: var(--fisk-sapphire);
+      max-width: 600px;
+    }
+
+    .fisk-slide-diagram .fisk-diagram-container {
+      width: 100%;
+      max-width: 800px;
+      margin: var(--fisk-space-xl) auto 0;
+      background: var(--fisk-ivory);
+      border-radius: var(--fisk-radius-standard);
+      padding: var(--fisk-space-xl);
+      border: 1px solid var(--fisk-cyan-20);
+    }
+
+    .fisk-slide-diagram .fisk-diagram-container svg {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+    }
+
+    /* Comparison Slide */
+    .fisk-slide-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--fisk-space-2xl);
+    }
+
+    .fisk-slide-comparison .fisk-comparison-column {
+      display: flex;
+      flex-direction: column;
+      gap: var(--fisk-space-lg);
+    }
+
+    .fisk-slide-comparison .fisk-comparison-title {
+      font-size: var(--fisk-text-2xl);
+      font-weight: var(--fisk-font-bold);
+      color: var(--fisk-obsidian);
+      padding-bottom: var(--fisk-space-md);
+      border-bottom: 2px solid var(--fisk-cyan);
+    }
+
+    .fisk-slide-comparison .fisk-comparison-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--fisk-space-md);
+    }
+
+    .fisk-slide-comparison .fisk-comparison-item {
+      display: flex;
+      align-items: center;
+      gap: var(--fisk-space-md);
+    }
+
+    .fisk-slide-comparison .fisk-comparison-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--fisk-cyan-10);
+      color: var(--fisk-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .fisk-slide-comparison .fisk-comparison-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .fisk-slide-comparison .fisk-comparison-text {
+      font-size: var(--fisk-text-base);
+      color: var(--fisk-obsidian);
+    }
+
+    /* Full Bleed Slide */
+    .fisk-slide-bleed {
+      background: var(--fisk-gradient-celestial);
+      border: none;
+      padding: var(--fisk-space-4xl);
+      text-align: center;
+      color: var(--fisk-ice);
+    }
+
+    .fisk-slide-bleed .fisk-bleed-title {
+      font-size: var(--fisk-text-5xl);
+      font-weight: var(--fisk-font-bold);
+      margin-bottom: var(--fisk-space-lg);
+    }
+
+    .fisk-slide-bleed .fisk-bleed-subtitle {
+      font-size: var(--fisk-text-2xl);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto var(--fisk-space-2xl);
+    }
+
+    .fisk-slide-bleed .fisk-bleed-motif {
+      margin: var(--fisk-space-2xl) auto;
+      max-width: 500px;
+    }
+
+    .fisk-slide-bleed .fisk-bleed-motif svg {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Quote Slide */
+    .fisk-slide-quote {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--fisk-space-4xl);
+    }
+
+    .fisk-slide-quote .fisk-quote-mark {
+      font-size: var(--fisk-text-5xl);
+      color: var(--fisk-cyan);
+      opacity: 0.5;
+      line-height: 0.5;
+      margin-bottom: var(--fisk-space-lg);
+    }
+
+    .fisk-slide-quote .fisk-quote-text {
+      font-size: var(--fisk-text-3xl);
+      font-weight: var(--fisk-font-medium);
+      color: var(--fisk-obsidian);
+      max-width: 800px;
+      line-height: var(--fisk-lead-relaxed);
+      margin-bottom: var(--fisk-space-xl);
+    }
+
+    .fisk-slide-quote .fisk-quote-author {
+      font-size: var(--fisk-text-lg);
+      color: var(--fisk-sapphire);
+      font-weight: var(--fisk-font-semibold);
+    }
+
+    /* Footer */
+    .fisk-presentation-footer {
+      background: var(--fisk-obsidian);
+      color: var(--fisk-ice);
+      padding: var(--fisk-space-xl);
+      text-align: center;
+      margin-top: var(--fisk-space-2xl);
+    }
+
+    .fisk-presentation-footer .fisk-footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--fisk-space-lg);
+      flex-wrap: wrap;
+    }
+
+    .fisk-presentation-footer .fisk-footer-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--fisk-space-sm);
+    }
+
+    .fisk-presentation-footer .fisk-footer-logo svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .fisk-presentation-footer .fisk-footer-logo-title {
+      font-size: var(--fisk-text-lg);
+      font-weight: var(--fisk-font-bold);
+      color: var(--fisk-cyan);
+    }
+
+    .fisk-presentation-footer .fisk-footer-divider {
+      width: 1px;
+      height: 32px;
+      background: var(--fisk-cyan-20);
+    }
+
+    .fisk-presentation-footer .fisk-footer-info {
+      font-size: var(--fisk-text-sm);
+      opacity: 0.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .fisk-presentation {
+        padding: var(--fisk-space-lg);
+      }
+
+      .fisk-slide {
+        padding: var(--fisk-space-2xl);
+      }
+
+      .fisk-slide-title .fisk-presentation-title {
+        font-size: var(--fisk-text-3xl);
+      }
+
+      .fisk-slide-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .fisk-slide-section .fisk-section-motif {
+        order: -1;
+      }
+
+      .fisk-slide-comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .fisk-slide-bleed {
+        padding: var(--fisk-space-2xl);
+      }
+
+      .fisk-slide-bleed .fisk-bleed-title {
+        font-size: var(--fisk-text-3xl);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .fisk-slide {
+        padding: var(--fisk-space-lg);
+      }
+
+      .fisk-slide-title .fisk-presentation-title {
+        font-size: var(--fisk-text-2xl);
+      }
+
+      .fisk-slide-title .fisk-presentation-subtitle {
+        font-size: var(--fisk-text-lg);
+      }
+
+      .fisk-slide-content .fisk-content-title {
+        font-size: var(--fisk-text-2xl);
+      }
+
+      .fisk-slide-diagram .fisk-diagram-title {
+        font-size: var(--fisk-text-2xl);
+      }
+
+      .fisk-slide-quote .fisk-quote-text {
+        font-size: var(--fisk-text-xl);
+      }
+
+      .fisk-presentation-footer .fisk-footer-content {
+        flex-direction: column;
+        gap: var(--fisk-space-md);
+      }
+
+      .fisk-presentation-footer .fisk-footer-divider {
+        width: 100%;
+        height: 1px;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .fisk-presentation {
+        padding: 0;
+      }
+
+      .fisk-slide {
+        page-break-inside: avoid;
+        page-break-after: always;
+        padding: var(--fisk-space-xl);
+        box-shadow: none;
+        border: none;
+      }
+
+      .fisk-slide:last-child {
+        page-break-after: avoid;
+      }
+
+      .fisk-presentation-footer {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="fisk-presentation">
+    
+    <!-- Slide 1: Title -->
+    <section class="fisk-slide fisk-slide-title">
+      <h1 class="fisk-presentation-title">FISK DIMENSION</h1>
+      <h2 class="fisk-presentation-subtitle">Sovereign Command Architecture for Omega-9</h2>
+      <div class="fisk-presentation-motif">
+        <!-- Regal Sentinel Silhouette -->
+        <svg viewBox="0 0 400 200" width="400" height="200">
+          <path d="M50 150 Q80 120 120 110 Q160 100 200 110 Q240 120 280 120 Q320 120 350 150 Q360 160 350 170 Q330 180 300 180 Q280 180 260 170 Q240 160 220 160 Q200 160 180 170 Q160 180 140 170 Q120 160 100 170 Q80 180 60 170 Q50 160 50 150 Z" fill="#0A0A0F"/>
+          <path d="M100 110 Q80 90 70 70 Q80 50 100 40 Q120 30 140 40 Q160 50 180 60 Q200 70 200 90 Q180 100 160 100 Q140 100 120 90 Q100 80 100 110 Z" fill="#0A0A0F"/>
+          <path d="M120 30 Q130 15 150 15 Q170 15 180 30 Q190 40 180 50 Q160 55 140 55 Q120 50 110 40 Q120 30 Z" fill="#0A0A0F"/>
+        </svg>
+      </div>
+      <div class="fisk-presentation-meta">
+        <span>KING NEXUS</span>
+        <span>•</span>
+        <span>OMEGA-9 ECOSYSTEM</span>
+        <span>•</span>
+        <span>2024</span>
+      </div>
+    </section>
+
+    <!-- Slide 2: Overview -->
+    <section class="fisk-slide fisk-slide-section">
+      <div class="fisk-section-content">
+        <h2 class="fisk-section-title">Architectural Overview</h2>
+        <p class="fisk-section-text">
+          The Fisk Dimension visual system unifies three complementary motifs into a cohesive identity that communicates sovereign authority, cosmic intelligence, and architectural permanence across all Omega-9 interfaces.
+        </p>
+      </div>
+      <div class="fisk-section-motif">
+        <!-- Celestial Throne Simple -->
+        <svg viewBox="0 0 400 300" width="400" height="300">
+          <rect width="400" height="300" fill="transparent"/>
+          <rect x="100" y="250" width="200" height="15" fill="#0A0A0F" stroke="#D4AF37" stroke-width="1"/>
+          <rect x="150" y="235" width="100" height="15" fill="#0A0A0F" stroke="#D4AF37" stroke-width="0.5"/>
+          <path d="M150 220 Q175 210 200 220 L200 230 Q175 240 150 230 Z" fill="#0A0A0F" stroke="#D4AF37" stroke-width="1"/>
+          <path d="M150 220 Q140 190 150 170 Q170 150 200 160 Q230 170 250 170 Q270 170 280 190 Q280 220 L250 220 Q230 220 200 210 Q170 220 150 220 Z" fill="#0A0A0F" stroke="#D4AF37" stroke-width="1"/>
+          <path d="M120 235 L120 100 Q130 80 140 60 L140 235 Z" fill="#0A0A0F" stroke="#D4AF37" stroke-width="1"/>
+          <path d="M280 235 L280 100 Q270 80 260 60 L260 235 Z" fill="#0A0A0F" stroke="#D4AF37" stroke-width="1"/>
+          <path d="M140 60 Q200 40 260 60" fill="none" stroke="#D4AF37" stroke-width="2"/>
+          <circle cx="200" cy="45" r="10" fill="#0A0A0F" stroke="#D4AF37" stroke-width="1"/>
+          <circle cx="200" cy="45" r="6" fill="#D4AF37" stroke="#B8860B" stroke-width="0.5"/>
+          <circle cx="200" cy="45" r="3" fill="#00D4FF"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Slide 3: Color System -->
+    <section class="fisk-slide fisk-slide-content">
+      <h2 class="fisk-content-title">Canonical Color System</h2>
+      <p class="fisk-content-subtitle">Precision, hierarchy, and restraint in every hue.</p>
+      
+      <div class="fisk-content-body">
+        <div class="fisk-content-item">
+          <div class="fisk-content-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <path d="M9 9V21"/>
+              <path d="M15 9V21"/>
+              <path d="M9 3h6"/>
+              <path d="M9 21h6"/>
+            </svg>
+          </div>
+          <div class="fisk-content-text">
+            <div class="fisk-content-text-title">Primary Palette</div>
+            <div class="fisk-content-text-description">Obsidian Black, Midnight Navy, Ice White, Electric Cyan, Deep Sapphire, Restrained Violet, Antique Gold</div>
+          </div>
+        </div>
+
+        <div class="fisk-content-item">
+          <div class="fisk-content-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <div class="fisk-content-text">
+            <div class="fisk-content-text-title">Semantic States</div>
+            <div class="fisk-content-text-description">Verified, Reported, Pending, Blocked, Failed — each with distinct symbols and colors</div>
+          </div>
+        </div>
+
+        <div class="fisk-content-item">
+          <div class="fisk-content-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <div class="fisk-content-text">
+            <div class="fisk-content-text-title">Governance Colors</div>
+            <div class="fisk-content-text-description">Ivory and Pale Blue reserved exclusively for documents and presentation surfaces</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Motifs -->
+    <section class="fisk-slide fisk-slide-content">
+      <h2 class="fisk-content-title">Three Unified Motifs</h2>
+      <p class="fisk-content-subtitle">Regal Sentinel • Holographic Intelligence • Celestial Throne</p>
+      
+      <div class="fisk-content-body">
+        <div class="fisk-content-item">
+          <div class="fisk-content-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div class="fisk-content-text">
+            <div class="fisk-content-text-title">Regal Sentinel</div>
+            <div class="fisk-content-text-description">Majestic white lion with flowing white-silver mane, icy cyan eyes, refined gold crown with blue jewels. Embodies authority, protection, and wisdom.</div>
+          </div>
+        </div>
+
+        <div class="fisk-content-item">
+          <div class="fisk-content-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+              <line x1="12" y1="2" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <line x1="4.22" y1="4.22" x2="19.78" y2="19.78"/>
+              <line x1="19.78" y1="4.22" x2="4.22" y2="19.78"/>
+            </svg>
+          </div>
+          <div class="fisk-content-text">
+            <div class="fisk-content-text-title">Holographic Intelligence</div>
+            <div class="fisk-content-text-description">Luminous abstract presence with subtle neural structures, concentric audio-signal rings, and controlled cyan-blue light. Represents system intelligence and data flow.</div>
+          </div>
+        </div>
+
+        <div class="fisk-content-item">
+          <div class="fisk-content-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+              <line x1="12" y1="3" x2="12" y2="7"/>
+              <line x1="4" y1="8" x2="20" y2="8"/>
+            </svg>
+          </div>
+          <div class="fisk-content-text">
+            <div class="fisk-content-text-title">Celestial Throne</div>
+            <div class="fisk-content-text-description">Monumental symmetrical architecture with antique-gold details, deep teal atmosphere, and central focal point. Represents sovereign command and cosmic order.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Diagram Example -->
+    <section class="fisk-slide fisk-slide-diagram">
+      <h2 class="fisk-diagram-title">Command Hierarchy</h2>
+      <p class="fisk-diagram-subtitle">Visual representation of authority flow within the Omega-9 ecosystem, with thin cyan connectors and status indicators.</p>
+      
+      <div class="fisk-diagram-container">
+        <!-- Hierarchy Diagram SVG -->
+        <svg viewBox="0 0 800 400" width="800" height="400">
+          <!-- Background Grid -->
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00D4FF" stroke-width="0.5" opacity="0.1"/>
+            </pattern>
+          </defs>
+          <rect width="800" height="400" fill="url(#grid)"/>
+          
+          <!-- Central Node: King Nexus -->
+          <g transform="translate(400, 100)">
+            <circle cx="0" cy="0" r="40" fill="#0A0A0F" stroke="#D4AF37" stroke-width="2"/>
+            <circle cx="0" cy="0" r="30" fill="#D4AF37" opacity="0.8"/>
+            <text x="0" y="5" text-anchor="middle" font-size="14" font-weight="bold" fill="#0A0A0F">KING NEXUS</text>
+            <text x="0" y="20" text-anchor="middle" font-size="10" fill="#0A0A0F">Sovereign</text>
+            <!-- Crown Icon -->
+            <path d="M-15 -40 L-5 -50 L5 -50 L15 -40 Q20 -35 15 -30 L5 -30 L-5 -30 L-15 -30 Q-20 -35 -15 -40 Z" fill="#D4AF37" stroke="#B8860B" stroke-width="0.5"/>
+          </g>
+          
+          <!-- Second Level: Command Centers -->
+          <g transform="translate(200, 200)">
+            <circle cx="0" cy="0" r="30" fill="#0F172A" stroke="#00D4FF" stroke-width="2"/>
+            <text x="0" y="5" text-anchor="middle" font-size="12" font-weight="bold" fill="#00D4FF">COMMAND</text>
+            <text x="0" y="18" text-anchor="middle" font-size="9" fill="#00D4FF">Center</text>
+          </g>
+          
+          <g transform="translate(600, 200)">
+            <circle cx="0" cy="0" r="30" fill="#0F172A" stroke="#00D4FF" stroke-width="2"/>
+            <text x="0" y="5" text-anchor="middle" font-size="12" font-weight="bold" fill="#00D4FF">COMMAND</text>
+            <text x="0" y="18" text-anchor="middle" font-size="9" fill="#00D4FF">Center</text>
+          </g>
+          
+          <!-- Third Level: Sub-commands -->
+          <g transform="translate(100, 300)">
+            <circle cx="0" cy="0" r="25" fill="#0F172A" stroke="#6366F1" stroke-width="1.5"/>
+            <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366F1">SECURITY</text>
+          </g>
+          
+          <g transform="translate(300, 300)">
+            <circle cx="0" cy="0" r="25" fill="#0F172A" stroke="#6366F1" stroke-width="1.5"/>
+            <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366F1">GOVERN</text>
+          </g>
+          
+          <g transform="translate(500, 300)">
+            <circle cx="0" cy="0" r="25" fill="#0F172A" stroke="#6366F1" stroke-width="1.5"/>
+            <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366F1">INTEL</text>
+          </g>
+          
+          <g transform="translate(700, 300)">
+            <circle cx="0" cy="0" r="25" fill="#0F172A" stroke="#6366F1" stroke-width="1.5"/>
+            <text x="0" y="5" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366F1">THRONE</text>
+          </g>
+          
+          <!-- Connectors -->
+          <line x1="400" y1="140" x2="200" y2="170" stroke="#00D4FF" stroke-width="1"/>
+          <line x1="400" y1="140" x2="600" y2="170" stroke="#00D4FF" stroke-width="1"/>
+          
+          <line x1="200" y1="230" x2="100" y2="275" stroke="#00D4FF" stroke-width="0.5"/>
+          <line x1="200" y1="230" x2="300" y2="275" stroke="#00D4FF" stroke-width="0.5"/>
+          
+          <line x1="600" y1="230" x2="500" y2="275" stroke="#00D4FF" stroke-width="0.5"/>
+          <line x1="600" y1="230" x2="700" y2="275" stroke="#00D4FF" stroke-width="0.5"/>
+          
+          <!-- Status Indicators -->
+          <circle cx="400" cy="100" r="5" fill="#00D4FF"/>
+          <circle cx="200" cy="200" r="4" fill="#00D4FF"/>
+          <circle cx="600" cy="200" r="4" fill="#00D4FF"/>
+          <circle cx="100" cy="300" r="3" fill="#6366F1"/>
+          <circle cx="300" cy="300" r="3" fill="#6366F1"/>
+          <circle cx="500" cy="300" r="3" fill="#6366F1"/>
+          <circle cx="700" cy="300" r="3" fill="#6366F1"/>
+          
+          <!-- Legend -->
+          <g transform="translate(650, 350)">
+            <line x1="0" y1="0" x2="80" y2="0" stroke="#00D4FF" stroke-width="1"/>
+            <text x="90" y="5" font-size="10" fill="#0F172A">Command Authority</text>
+            
+            <line x1="0" y1="20" x2="80" y2="20" stroke="#6366F1" stroke-width="1"/>
+            <text x="90" y="25" font-size="10" fill="#0F172A">Sub-command</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Slide 6: Full Bleed with Motif -->
+    <section class="fisk-slide fisk-slide-bleed">
+      <h1 class="fisk-bleed-title">SYSTEM INTEGRITY</h1>
+      <p class="fisk-bleed-subtitle">All components verified, all connections secure. The Fisk Dimension operates at peak sovereign capacity.</p>
+      <div class="fisk-bleed-motif">
+        <!-- Celestial Throne Full -->
+        <svg viewBox="0 0 600 400" width="600" height="400">
+          <rect width="600" height="400" fill="transparent"/>
+          
+          <!-- Base Platform -->
+          <rect x="150" y="350" width="300" height="15" fill="#0F172A" stroke="#D4AF37" stroke-width="2"/>
+          
+          <!-- Steps -->
+          <rect x="200" y="335" width="200" height="15" fill="#0F172A" stroke="#D4AF37" stroke-width="1"/>
+          <rect x="250" y="320" width="100" height="15" fill="#0F172A" stroke="#D4AF37" stroke-width="1"/>
+          
+          <!-- Throne Chair -->
+          <path d="M250 300 Q300 280 350 300 L350 320 Q300 340 250 320 Z" fill="#0F172A" stroke="#D4AF37" stroke-width="2"/>
+          <path d="M250 300 Q230 260 250 230 Q270 200 300 210 Q330 220 350 230 Q370 230 380 250 Q380 280 350 300" fill="#0F172A" stroke="#D4AF37" stroke-width="2"/>
+          
+          <!-- Columns -->
+          <path d="M200 320 L200 150 Q210 130 220 110 Q230 90 240 70 L240 320 Z" fill="#0F172A" stroke="#D4AF37" stroke-width="2"/>
+          <path d="M380 320 L380 150 Q370 130 360 110 Q350 90 340 70 L340 320 Z" fill="#0F172A" stroke="#D4AF37" stroke-width="2"/>
+          
+          <!-- Arch -->
+          <path d="M240 70 Q300 30 360 70" fill="none" stroke="#D4AF37" stroke-width="4"/>
+          <path d="M240 70 Q260 60 280 65 Q300 70 320 65 Q340 60 360 70" fill="none" stroke="#F4E48C" stroke-width="2"/>
+          
+          <!-- Arch Medallion -->
+          <circle cx="300" cy="45" r="18" fill="#0F172A" stroke="#D4AF37" stroke-width="2"/>
+          <circle cx="300" cy="45" r="12" fill="#D4AF37" stroke="#B8860B" stroke-width="1"/>
+          <circle cx="300" cy="45" r="6" fill="#00D4FF"/>
+          
+          <!-- Volumetric Light -->
+          <ellipse cx="300" cy="200" rx="120" ry="40" fill="#00D4FF" opacity="0.05"/>
+          <ellipse cx="300" cy="200" rx="80" ry="25" fill="#00D4FF" opacity="0.08"/>
+          
+          <!-- Sentinel Silhouette on Throne -->
+          <g transform="translate(270, 250) scale(0.25)">
+            <path d="M50 150 Q80 120 120 110 Q160 100 200 110 Q240 120 280 120 Q320 120 350 150 Q360 160 350 170 Q330 180 300 180 Q280 180 260 170 Q240 160 220 160 Q200 160 180 170 Q160 180 140 170 Q120 160 100 170 Q80 180 60 170 Q50 160 50 150 Z" fill="#F8F9FA"/>
+            <path d="M100 110 Q80 90 70 70 Q80 50 100 40 Q120 30 140 40 Q160 50 180 60 Q200 70 200 90 Q180 100 160 100 Q140 100 120 90 Q100 80 100 110 Z" fill="#F8F9FA"/>
+            <path d="M120 30 Q130 15 150 15 Q170 15 180 30 Q190 40 180 50 Q160 55 140 55 Q120 50 110 40 Q120 30 Z" fill="#F8F9FA"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Slide 7: Quote -->
+    <section class="fisk-slide fisk-slide-quote">
+      <div class="fisk-quote-mark">"</div>
+      <blockquote class="fisk-quote-text">
+        Authority is not claimed; it is recognized. The Regal Sentinel does not rule through force, but through the unshakable integrity of the Celestial Throne.
+      </blockquote>
+      <cite class="fisk-quote-author">— KING NEXUS</cite>
+    </section>
+
+    <!-- Slide 8: Comparison -->
+    <section class="fisk-slide fisk-slide-comparison">
+      <div class="fisk-comparison-column">
+        <h3 class="fisk-comparison-title">Traditional Systems</h3>
+        <div class="fisk-comparison-content">
+          <div class="fisk-comparison-item">
+            <div class="fisk-comparison-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <span class="fisk-comparison-text">Generic Icons</span>
+          </div>
+          <div class="fisk-comparison-item">
+            <div class="fisk-comparison-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+            </div>
+            <span class="fisk-comparison-text">Inconsistent Branding</span>
+          </div>
+          <div class="fisk-comparison-item">
+            <div class="fisk-comparison-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <span class="fisk-comparison-text">Multiple Users</span>
+          </div>
+          <div class="fisk-comparison-item">
+            <div class="fisk-comparison-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
+            <span class="fisk-comparison-text">Cluttered Interfaces</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="fisk-comparison-column">
+        <h3 class="fisk-comparison-title">Fisk Dimension</h3>
+        <div class="fisk-comparison-content">
+          <div class="fisk-comparison-item">
+            <div class="fisk-comparison-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <span class="fisk-comparison-text">Regal Sentinel Motif</span>
+          </div>
+          <div class="fisk-comparison-item">
+            <div class="fisk-comparison-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <span class="fisk-comparison-text">Holographic Intelligence</span>
+          </div>
+          <div class="fisk-comparison-item">
+            <div class="fisk-comparison-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <span class="fisk-comparison-text">Celestial Throne</span>
+          </div>
+          <div class="fisk-comparison-item">
+            <div class="fisk-comparison-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <span class="fisk-comparison-text">Canonical Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fisk-presentation-footer">
+      <div class="fisk-footer-content">
+        <div class="fisk-footer-logo">
+          <svg viewBox="0 0 40 40" width="40" height="40">
+            <path d="M20 5 Q25 0 30 5 Q35 10 30 15 Q25 20 20 15 Q15 20 10 15 Q5 10 10 5 Q15 0 20 5 Z" fill="#00D4FF"/>
+          </svg>
+          <span class="fisk-footer-logo-title">FISK DIMENSION</span>
+        </div>
+        <div class="fisk-footer-divider"></div>
+        <div class="fisk-footer-info">
+          <span>OMEGA-9 SOVEREIGN COMMAND</span>
+          <span>•</span>
+          <span>Confidential</span>
+          <span>•</span>
+          <span>2024</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,534 @@
+/* FISK DIMENSION × OMEGA-9 — UI Components: Navigation */
+/* Version: 1.0.0 */
+
+/* ===== Sidebar ===== */
+.fisk-sidebar {
+  width: var(--fisk-sidebar-width, 256px);
+  background: var(--fisk-obsidian);
+  border-right: 1px solid var(--fisk-cyan-10);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: var(--fisk-z-sticky);
+}
+
+.fisk-sidebar .fisk-sidebar-header {
+  padding: var(--fisk-space-lg);
+  border-bottom: 1px solid var(--fisk-cyan-10);
+}
+
+.fisk-sidebar .fisk-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-sm);
+  text-decoration: none;
+  color: var(--fisk-ice);
+}
+
+.fisk-sidebar .fisk-sidebar-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+.fisk-sidebar .fisk-sidebar-logo .fisk-sidebar-logo-title {
+  font-size: var(--fisk-text-xl);
+  font-weight: var(--fisk-font-bold);
+  color: var(--fisk-cyan);
+}
+
+.fisk-sidebar .fisk-sidebar-logo .fisk-sidebar-logo-subtitle {
+  font-size: var(--fisk-text-sm);
+  opacity: 0.7;
+}
+
+.fisk-sidebar .fisk-sidebar-nav {
+  flex: 1;
+  padding: var(--fisk-space-md);
+  overflow-y: auto;
+}
+
+.fisk-sidebar .fisk-sidebar-nav-section {
+  margin-bottom: var(--fisk-space-lg);
+}
+
+.fisk-sidebar .fisk-sidebar-nav-section-title {
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-xs);
+  font-weight: var(--fisk-font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  padding: 0 var(--fisk-space-sm);
+  margin-bottom: var(--fisk-space-sm);
+}
+
+.fisk-sidebar .fisk-sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-sm);
+  padding: var(--fisk-space-sm) var(--fisk-space-md);
+  color: var(--fisk-ice);
+  text-decoration: none;
+  border-radius: var(--fisk-radius-subtle);
+  transition: all var(--fisk-transition-normal);
+  cursor: pointer;
+}
+
+.fisk-sidebar .fisk-sidebar-nav-item:hover {
+  background: var(--fisk-cyan-10);
+  color: var(--fisk-ice);
+}
+
+.fisk-sidebar .fisk-sidebar-nav-item.active {
+  background: var(--fisk-cyan-15);
+  color: var(--fisk-cyan);
+  border-left: 3px solid var(--fisk-cyan);
+}
+
+.fisk-sidebar .fisk-sidebar-nav-item .fisk-sidebar-nav-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+  transition: opacity var(--fisk-transition-normal);
+}
+
+.fisk-sidebar .fisk-sidebar-nav-item:hover .fisk-sidebar-nav-icon,
+.fisk-sidebar .fisk-sidebar-nav-item.active .fisk-sidebar-nav-icon {
+  opacity: 1;
+}
+
+.fisk-sidebar .fisk-sidebar-nav-item .fisk-sidebar-nav-label {
+  font-size: var(--fisk-text-sm);
+}
+
+.fisk-sidebar .fisk-sidebar-nav-item .fisk-sidebar-nav-badge {
+  margin-left: auto;
+  background: var(--fisk-cyan-20);
+  color: var(--fisk-cyan);
+  font-size: var(--fisk-text-xs);
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.fisk-sidebar .fisk-sidebar-footer {
+  padding: var(--fisk-space-md);
+  border-top: 1px solid var(--fisk-cyan-10);
+}
+
+/* ===== Collapsed Sidebar ===== */
+.fisk-sidebar.collapsed {
+  width: var(--fisk-sidebar-collapsed-width, 64px);
+}
+
+.fisk-sidebar.collapsed .fisk-sidebar-logo-title,
+.fisk-sidebar.collapsed .fisk-sidebar-logo-subtitle,
+.fisk-sidebar.collapsed .fisk-sidebar-nav-section-title,
+.fisk-sidebar.collapsed .fisk-sidebar-nav-label,
+.fisk-sidebar.collapsed .fisk-sidebar-nav-badge {
+  display: none;
+}
+
+.fisk-sidebar.collapsed .fisk-sidebar-nav-item {
+  justify-content: center;
+  padding: var(--fisk-space-sm);
+}
+
+.fisk-sidebar.collapsed .fisk-sidebar-nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== Top Navigation ===== */
+.fisk-topnav {
+  height: var(--fisk-topnav-height, 64px);
+  background: var(--fisk-obsidian);
+  border-bottom: 1px solid var(--fisk-cyan-10);
+  position: sticky;
+  top: 0;
+  z-index: var(--fisk-z-sticky);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--fisk-space-lg);
+}
+
+.fisk-topnav .fisk-topnav-left {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-lg);
+}
+
+.fisk-topnav .fisk-topnav-left .fisk-topnav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--fisk-ice);
+  cursor: pointer;
+  padding: var(--fisk-space-xs);
+}
+
+.fisk-topnav .fisk-topnav-left .fisk-topnav-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.fisk-topnav .fisk-topnav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-sm);
+  text-decoration: none;
+  color: var(--fisk-ice);
+}
+
+.fisk-topnav .fisk-topnav-brand svg {
+  width: 32px;
+  height: 32px;
+}
+
+.fisk-topnav .fisk-topnav-brand .fisk-topnav-brand-title {
+  font-size: var(--fisk-text-lg);
+  font-weight: var(--fisk-font-bold);
+  color: var(--fisk-cyan);
+}
+
+.fisk-topnav .fisk-topnav-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-md);
+}
+
+.fisk-topnav .fisk-topnav-nav .fisk-topnav-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-xs);
+  padding: var(--fisk-space-xs) var(--fisk-space-sm);
+  color: var(--fisk-ice);
+  text-decoration: none;
+  border-radius: var(--fisk-radius-subtle);
+  transition: all var(--fisk-transition-normal);
+  font-size: var(--fisk-text-sm);
+}
+
+.fisk-topnav .fisk-topnav-nav .fisk-topnav-nav-item:hover {
+  background: var(--fisk-cyan-10);
+  color: var(--fisk-cyan);
+}
+
+.fisk-topnav .fisk-topnav-nav .fisk-topnav-nav-item.active {
+  background: var(--fisk-cyan-15);
+  color: var(--fisk-cyan);
+}
+
+.fisk-topnav .fisk-topnav-nav .fisk-topnav-nav-item .fisk-topnav-nav-badge {
+  background: var(--fisk-cyan-20);
+  color: var(--fisk-cyan);
+  font-size: var(--fisk-text-xs);
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.fisk-topnav .fisk-topnav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-sm);
+}
+
+.fisk-topnav .fisk-topnav-right .fisk-topnav-user {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-sm);
+  padding: var(--fisk-space-xs) var(--fisk-space-sm);
+  border-radius: var(--fisk-radius-subtle);
+  cursor: pointer;
+  transition: all var(--fisk-transition-normal);
+}
+
+.fisk-topnav .fisk-topnav-right .fisk-topnav-user:hover {
+  background: var(--fisk-cyan-10);
+}
+
+.fisk-topnav .fisk-topnav-right .fisk-topnav-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--fisk-cyan);
+  color: var(--fisk-obsidian);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--fisk-font-bold);
+}
+
+.fisk-topnav .fisk-topnav-right .fisk-topnav-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.fisk-topnav .fisk-topnav-right .fisk-topnav-user-name {
+  font-size: var(--fisk-text-sm);
+  font-weight: var(--fisk-font-medium);
+  color: var(--fisk-ice);
+}
+
+.fisk-topnav .fisk-topnav-right .fisk-topnav-user-role {
+  font-size: var(--fisk-text-xs);
+  color: var(--fisk-cyan);
+  opacity: 0.8;
+}
+
+/* ===== Breadcrumb ===== */
+.fisk-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-xs);
+  padding: var(--fisk-space-md) var(--fisk-space-lg);
+  background: var(--fisk-navy);
+  border-bottom: 1px solid var(--fisk-cyan-10);
+}
+
+.fisk-breadcrumb .fisk-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-xs);
+  color: var(--fisk-ice);
+  text-decoration: none;
+  font-size: var(--fisk-text-sm);
+  opacity: 0.7;
+}
+
+.fisk-breadcrumb .fisk-breadcrumb-item:hover {
+  color: var(--fisk-cyan);
+  opacity: 1;
+}
+
+.fisk-breadcrumb .fisk-breadcrumb-item.active {
+  color: var(--fisk-cyan);
+  opacity: 1;
+}
+
+.fisk-breadcrumb .fisk-breadcrumb-separator {
+  color: var(--fisk-cyan);
+  opacity: 0.5;
+}
+
+.fisk-breadcrumb .fisk-breadcrumb-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== Tabs ===== */
+.fisk-tabs {
+  display: flex;
+  gap: var(--fisk-space-xs);
+  border-bottom: 1px solid var(--fisk-cyan-10);
+  padding: 0 var(--fisk-space-lg);
+}
+
+.fisk-tabs .fisk-tab {
+  padding: var(--fisk-space-md) var(--fisk-space-lg);
+  color: var(--fisk-ice);
+  text-decoration: none;
+  font-size: var(--fisk-text-sm);
+  font-weight: var(--fisk-font-medium);
+  border-bottom: 2px solid transparent;
+  transition: all var(--fisk-transition-normal);
+  margin-bottom: -1px;
+}
+
+.fisk-tabs .fisk-tab:hover {
+  color: var(--fisk-cyan);
+  border-bottom-color: var(--fisk-cyan-50);
+}
+
+.fisk-tabs .fisk-tab.active {
+  color: var(--fisk-cyan);
+  border-bottom-color: var(--fisk-cyan);
+}
+
+.fisk-tabs .fisk-tab-badge {
+  background: var(--fisk-cyan-20);
+  color: var(--fisk-cyan);
+  font-size: var(--fisk-text-xs);
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: var(--fisk-space-xs);
+}
+
+/* ===== Vertical Tabs ===== */
+.fisk-tabs-vertical {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: 1px solid var(--fisk-cyan-10);
+  padding: var(--fisk-space-lg) 0;
+}
+
+.fisk-tabs-vertical .fisk-tab {
+  padding: var(--fisk-space-md) var(--fisk-space-lg);
+  border-bottom: none;
+  border-right: 2px solid transparent;
+  margin-right: -1px;
+}
+
+.fisk-tabs-vertical .fisk-tab.active {
+  border-right-color: var(--fisk-cyan);
+}
+
+/* ===== Pagination ===== */
+.fisk-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--fisk-space-xs);
+  padding: var(--fisk-space-lg);
+}
+
+.fisk-pagination .fisk-pagination-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--fisk-cyan-20);
+  background: transparent;
+  color: var(--fisk-ice);
+  border-radius: var(--fisk-radius-subtle);
+  cursor: pointer;
+  transition: all var(--fisk-transition-normal);
+  font-size: var(--fisk-text-sm);
+}
+
+.fisk-pagination .fisk-pagination-btn:hover:not(:disabled) {
+  background: var(--fisk-cyan-10);
+  border-color: var(--fisk-cyan);
+  color: var(--fisk-cyan);
+}
+
+.fisk-pagination .fisk-pagination-btn.active {
+  background: var(--fisk-cyan);
+  border-color: var(--fisk-cyan);
+  color: var(--fisk-obsidian);
+}
+
+.fisk-pagination .fisk-pagination-btn:disabled {
+  background: transparent;
+  border-color: var(--fisk-cyan-20);
+  color: var(--fisk-ice);
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.fisk-pagination .fisk-pagination-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== Mobile Navigation ===== */
+@media (max-width: 768px) {
+  .fisk-sidebar {
+    transform: translateX(-100%);
+    transition: transform var(--fisk-transition-normal);
+  }
+
+  .fisk-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .fisk-sidebar .fisk-sidebar-header {
+    padding: var(--fisk-space-md);
+  }
+
+  .fisk-sidebar .fisk-sidebar-nav {
+    padding: var(--fisk-space-sm);
+  }
+
+  .fisk-topnav .fisk-topnav-left .fisk-topnav-toggle {
+    display: flex;
+  }
+
+  .fisk-topnav .fisk-topnav-nav {
+    display: none;
+  }
+
+  .fisk-breadcrumb {
+    display: none;
+  }
+}
+
+/* ===== Navigation Overlay ===== */
+.fisk-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 15, 0.8);
+  z-index: calc(var(--fisk-z-sticky) - 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--fisk-transition-normal);
+}
+
+.fisk-nav-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Tooltip ===== */
+.fisk-tooltip {
+  position: absolute;
+  background: var(--fisk-obsidian);
+  border: 1px solid var(--fisk-cyan-20);
+  border-radius: var(--fisk-radius-subtle);
+  padding: var(--fisk-space-xs) var(--fisk-space-sm);
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-sm);
+  z-index: var(--fisk-z-tooltip);
+  white-space: nowrap;
+  box-shadow: var(--fisk-shadow-lg);
+}
+
+.fisk-tooltip::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--fisk-obsidian);
+  border: 1px solid var(--fisk-cyan-20);
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(-45deg);
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.fisk-tooltip.top::after {
+  top: -5px;
+  bottom: auto;
+  border: 1px solid var(--fisk-cyan-20);
+  border-left: none;
+  border-top: none;
+}
+
+.fisk-tooltip.left::after {
+  left: -5px;
+  right: auto;
+  bottom: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  border: 1px solid var(--fisk-cyan-20);
+  border-right: none;
+  border-top: none;
+}
+
+.fisk-tooltip.right::after {
+  right: -5px;
+  left: auto;
+  bottom: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  border: 1px solid var(--fisk-cyan-20);
+  border-left: none;
+  border-bottom: none;
+}

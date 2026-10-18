@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Color Definitions -->
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    
+    <linearGradient id="documentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0F"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    
+    <linearGradient id="verifiedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#0099CC"/>
+    </linearGradient>
+    
+    <!-- Filter for glow -->
+    <filter id="documentGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- Background Pattern -->
+    <pattern id="provenanceGrid" patternUnits="userSpaceOnUse" width="40" height="40">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00D4FF" stroke-width="0.3" opacity="0.05"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0A0A0F"/>
+  <rect width="800" height="600" fill="url(#provenanceGrid)"/>
+  
+  <!-- Diagram Title -->
+  <g id="diagramTitle">
+    <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#00D4FF">
+      EVIDENCE PROVENANCE
+    </text>
+    <text x="400" y="50" text-anchor="middle" font-size="14" fill="#6366F1">
+      Fisk Dimension × Omega-9
+    </text>
+  </g>
+  
+  <!-- Main Diagram -->
+  <g id="provenanceDiagram" transform="translate(400, 100)">
+    
+    <!-- Timeline (Vertical) -->
+    <g id="timeline">
+      <!-- Timeline Line -->
+      <line x1="0" y1="-300" x2="0" y2="200" stroke="#00D4FF" stroke-width="2"/>
+      
+      <!-- Time Markers -->
+      <g transform="translate(0, -300)">
+        <circle cx="0" cy="0" r="6" fill="#00D4FF"/>
+        <text x="15" y="5" font-size="10" fill="#00D4FF">T-0</text>
+        <text x="15" y="17" font-size="8" fill="#00D4FF">Origin</text>
+      </g>
+      
+      <g transform="translate(0, -200)">
+        <circle cx="0" cy="0" r="6" fill="#00D4FF"/>
+        <text x="15" y="5" font-size="10" fill="#00D4FF">T-1</text>
+        <text x="15" y="17" font-size="8" fill="#00D4FF">1 Hour</text>
+      </g>
+      
+      <g transform="translate(0, -100)">
+        <circle cx="0" cy="0" r="6" fill="#00D4FF"/>
+        <text x="15" y="5" font-size="10" fill="#00D4FF">T-2</text>
+        <text x="15" y="17" font-size="8" fill="#00D4FF">2 Hours</text>
+      </g>
+      
+      <g transform="translate(0, 0)">
+        <circle cx="0" cy="0" r="6" fill="#00D4FF"/>
+        <text x="15" y="5" font-size="10" fill="#00D4FF">T-3</text>
+        <text x="15" y="17" font-size="8" fill="#00D4FF">3 Hours</text>
+      </g>
+      
+      <g transform="translate(0, 100)">
+        <circle cx="0" cy="0" r="6" fill="#00D4FF"/>
+        <text x="15" y="5" font-size="10" fill="#00D4FF">T-4</text>
+        <text x="15" y="17" font-size="8" fill="#00D4FF">4 Hours</text>
+      </g>
+      
+      <g transform="translate(0, 200)">
+        <circle cx="0" cy="0" r="6" fill="#00D4FF"/>
+        <text x="15" y="5" font-size="10" fill="#00D4FF">T-5</text>
+        <text x="15" y="17" font-size="8" fill="#00D4FF">Current</text>
+      </g>
+    </g>
+    
+    <!-- Evidence Nodes -->
+    
+    <!-- Node 1: Origin (T-0) -->
+    <g id="node1" transform="translate(-200, -300)">
+      <!-- Document -->
+      <rect x="-40" y="-30" width="80" height="60" rx="4" fill="url(#documentGradient)" 
+            stroke="#00D4FF" stroke-width="2" filter="url(#documentGlow)"/>
+      
+      <!-- Document Icon -->
+      <path d="M-15 -15 L-15 15 L15 15 L15 -15 Z" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+      <path d="M-15 -15 L0 0 L15 -15" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3" fill="#00D4FF"/>
+      
+      <!-- Document Label -->
+      <text x="0" y="-35" text-anchor="middle" font-size="10" font-weight="bold" fill="#00D4FF">
+        EVIDENCE-001
+      </text>
+      <text x="0" y="-25" text-anchor="middle" font-size="8" fill="#00D4FF">
+        Initial Report
+      </text>
+      
+      <!-- Verification Badge -->
+      <circle cx="25" cy="-25" r="8" fill="url(#verifiedGradient)"/>
+      <path d="M22 -25 L24 -22 L28 -26" fill="none" stroke="#0A0A0F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Timestamp -->
+      <text x="0" y="25" text-anchor="middle" font-size="7" fill="#00D4FF">
+        2024-01-15 10:00:00
+      </text>
+      
+      <!-- Connector to Timeline -->
+      <line x1="0" y1="0" x2="200" y2="0" stroke="#00D4FF" stroke-width="1" stroke-dasharray="2,1"/>
+    </g>
+    
+    <!-- Node 2: Verified (T-1) -->
+    <g id="node2" transform="translate(-150, -200)">
+      <!-- Document -->
+      <rect x="-40" y="-30" width="80" height="60" rx="4" fill="url(#documentGradient)" 
+            stroke="#00D4FF" stroke-width="2" filter="url(#documentGlow)"/>
+      
+      <!-- Document Icon -->
+      <path d="M-15 -15 L-15 15 L15 15 L15 -15 Z" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+      <path d="M-15 -15 L0 0 L15 -15" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3" fill="#00D4FF"/>
+      
+      <!-- Document Label -->
+      <text x="0" y="-35" text-anchor="middle" font-size="10" font-weight="bold" fill="#00D4FF">
+        EVIDENCE-002
+      </text>
+      <text x="0" y="-25" text-anchor="middle" font-size="8" fill="#00D4FF">
+        Verification
+      </text>
+      
+      <!-- Verification Badge -->
+      <circle cx="25" cy="-25" r="8" fill="url(#verifiedGradient)"/>
+      <path d="M22 -25 L24 -22 L28 -26" fill="none" stroke="#0A0A0F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Timestamp -->
+      <text x="0" y="25" text-anchor="middle" font-size="7" fill="#00D4FF">
+        2024-01-15 11:00:00
+      </text>
+      
+      <!-- Connector to Timeline -->
+      <line x1="0" y1="0" x2="150" y2="0" stroke="#00D4FF" stroke-width="1" stroke-dasharray="2,1"/>
+      
+      <!-- Connector from Previous -->
+      <line x1="-50" y1="-100" x2="0" y2="-30" stroke="#00D4FF" stroke-width="1"/>
+    </g>
+    
+    <!-- Node 3: Reported (T-2) -->
+    <g id="node3" transform="translate(-100, -100)">
+      <!-- Document -->
+      <rect x="-40" y="-30" width="80" height="60" rx="4" fill="url(#documentGradient)" 
+            stroke="#6366F1" stroke-width="2" filter="url(#documentGlow)"/>
+      
+      <!-- Document Icon -->
+      <path d="M-15 -15 L-15 15 L15 15 L15 -15 Z" fill="none" stroke="#6366F1" stroke-width="1.5"/>
+      <path d="M-15 -15 L0 0 L15 -15" fill="none" stroke="#6366F1" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3" fill="#6366F1"/>
+      
+      <!-- Document Label -->
+      <text x="0" y="-35" text-anchor="middle" font-size="10" font-weight="bold" fill="#6366F1">
+        EVIDENCE-003
+      </text>
+      <text x="0" y="-25" text-anchor="middle" font-size="8" fill="#6366F1">
+        User Report
+      </text>
+      
+      <!-- Reported Badge -->
+      <path d="M22 -28 L25 -20 L30 -28 Z" fill="#6366F1" opacity="0.8"/>
+      <path d="M22 -28 L25 -20 L30 -28 Z" fill="none" stroke="#6366F1" stroke-width="0.5"/>
+      
+      <!-- Timestamp -->
+      <text x="0" y="25" text-anchor="middle" font-size="7" fill="#6366F1">
+        2024-01-15 12:00:00
+      </text>
+      
+      <!-- Connector to Timeline -->
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#6366F1" stroke-width="1" stroke-dasharray="2,1"/>
+      
+      <!-- Connector from Previous -->
+      <line x1="-50" y1="-100" x2="0" y2="-30" stroke="#6366F1" stroke-width="1"/>
+    </g>
+    
+    <!-- Node 4: Pending (T-3) -->
+    <g id="node4" transform="translate(-50, 0)">
+      <!-- Document -->
+      <rect x="-40" y="-30" width="80" height="60" rx="4" fill="url(#documentGradient)" 
+            stroke="#D4AF37" stroke-width="2" filter="url(#documentGlow)"/>
+      
+      <!-- Document Icon -->
+      <path d="M-15 -15 L-15 15 L15 15 L15 -15 Z" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+      <path d="M-15 -15 L0 0 L15 -15" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3" fill="#D4AF37"/>
+      
+      <!-- Document Label -->
+      <text x="0" y="-35" text-anchor="middle" font-size="10" font-weight="bold" fill="#D4AF37">
+        EVIDENCE-004
+      </text>
+      <text x="0" y="-25" text-anchor="middle" font-size="8" fill="#D4AF37">
+        Analysis
+      </text>
+      
+      <!-- Pending Badge -->
+      <rect x="20" y="-28" width="16" height="16" rx="2" fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <rect x="22" y="-24" width="12" height="8" fill="#D4AF37" opacity="0.8"/>
+      <rect x="22" y="-20" width="12" height="2" fill="#D4AF37" opacity="0.8"/>
+      
+      <!-- Timestamp -->
+      <text x="0" y="25" text-anchor="middle" font-size="7" fill="#D4AF37">
+        2024-01-15 13:00:00
+      </text>
+      
+      <!-- Connector to Timeline -->
+      <line x1="0" y1="0" x2="50" y2="0" stroke="#D4AF37" stroke-width="1" stroke-dasharray="2,1"/>
+      
+      <!-- Connector from Previous -->
+      <line x1="-50" y1="-100" x2="0" y2="-30" stroke="#D4AF37" stroke-width="1"/>
+    </g>
+    
+    <!-- Node 5: Current (T-5) -->
+    <g id="node5" transform="translate(0, 200)">
+      <!-- Document -->
+      <rect x="-40" y="-30" width="80" height="60" rx="4" fill="url(#documentGradient)" 
+            stroke="#00D4FF" stroke-width="2" filter="url(#documentGlow)"/>
+      
+      <!-- Document Icon -->
+      <path d="M-15 -15 L-15 15 L15 15 L15 -15 Z" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+      <path d="M-15 -15 L0 0 L15 -15" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3" fill="#00D4FF"/>
+      
+      <!-- Document Label -->
+      <text x="0" y="-35" text-anchor="middle" font-size="10" font-weight="bold" fill="#00D4FF">
+        EVIDENCE-005
+      </text>
+      <text x="0" y="-25" text-anchor="middle" font-size="8" fill="#00D4FF">
+        Final Audit
+      </text>
+      
+      <!-- Verification Badge -->
+      <circle cx="25" cy="-25" r="8" fill="url(#verifiedGradient)"/>
+      <path d="M22 -25 L24 -22 L28 -26" fill="none" stroke="#0A0A0F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Timestamp -->
+      <text x="0" y="25" text-anchor="middle" font-size="7" fill="#00D4FF">
+        2024-01-15 14:00:00
+      </text>
+      
+      <!-- Connector to Timeline -->
+      <line x1="0" y1="0" x2="0" y2="-200" stroke="#00D4FF" stroke-width="1" stroke-dasharray="2,1"/>
+      
+      <!-- Connector from Previous -->
+      <line x1="-50" y1="-100" x2="0" y2="-30" stroke="#00D4FF" stroke-width="1"/>
+    </g>
+    
+    <!-- Provenance Chain (Connecting all nodes) -->
+    <g id="provenanceChain">
+      <line x1="-200" y1="-300" x2="-150" y2="-200" stroke="#00D4FF" stroke-width="1.5" opacity="0.5"/>
+      <line x1="-150" y1="-200" x2="-100" y2="-100" stroke="#00D4FF" stroke-width="1.5" opacity="0.5"/>
+      <line x1="-100" y1="-100" x2="-50" y2="0" stroke="#00D4FF" stroke-width="1.5" opacity="0.5"/>
+      <line x1="-50" y1="0" x2="0" y2="200" stroke="#00D4FF" stroke-width="1.5" opacity="0.5"/>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 550)">
+    <text x="0" y="0" font-size="12" font-weight="bold" fill="#00D4FF">LEGEND:</text>
+    
+    <g transform="translate(0, 20)">
+      <rect x="0" y="-10" width="20" height="20" rx="2" fill="url(#documentGradient)" stroke="#00D4FF" stroke-width="1"/>
+      <text x="25" y="5" font-size="10" fill="#F8F9FA">Evidence Document</text>
+    </g>
+    
+    <g transform="translate(0, 40)">
+      <circle cx="10" cy="0" r="6" fill="#00D4FF"/>
+      <text x="25" y="5" font-size="10" fill="#F8F9FA">Timeline Marker</text>
+    </g>
+    
+    <g transform="translate(0, 60)">
+      <line x1="0" y1="0" x2="40" y2="0" stroke="#00D4FF" stroke-width="1" stroke-dasharray="2,1"/>
+      <text x="50" y="5" font-size="10" fill="#00D4FF">Timeline Connection</text>
+    </g>
+    
+    <g transform="translate(250, 20)">
+      <line x1="0" y1="0" x2="40" y2="0" stroke="#00D4FF" stroke-width="1.5" opacity="0.5"/>
+      <text x="50" y="5" font-size="10" fill="#00D4FF">Provenance Chain</text>
+    </g>
+    
+    <g transform="translate(250, 40)">
+      <circle cx="10" cy="0" r="8" fill="url(#verifiedGradient)"/>
+      <path d="M7 0 L9 -3 L13 1" fill="none" stroke="#0A0A0F" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="25" y="5" font-size="8" fill="#0A0A0F">VERIFIED</text>
+    </g>
+    
+    <g transform="translate(250, 60)">
+      <path d="M7 -3 L10 3 L13 -3 Z" fill="#6366F1" opacity="0.8"/>
+      <path d="M7 -3 L10 3 L13 -3 Z" fill="none" stroke="#6366F1" stroke-width="0.5"/>
+      <text x="25" y="5" font-size="8" fill="#6366F1">REPORTED</text>
+    </g>
+    
+    <g transform="translate(400, 20)">
+      <rect x="7" y="-3" width="6" height="6" rx="1" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+      <rect x="8" y="-1" width="4" height="2" fill="#D4AF37" opacity="0.8"/>
+      <rect x="8" y="1" width="4" height="2" fill="#D4AF37" opacity="0.8"/>
+      <text x="25" y="5" font-size="8" fill="#D4AF37">PENDING</text>
+    </g>
+    
+    <g transform="translate(400, 40)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#EF4444" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#EF4444">BLOCKED</text>
+    </g>
+    
+    <g transform="translate(400, 60)">
+      <rect x="0" y="-5" width="36" height="16" rx="4" fill="#7C2D12" opacity="0.2"/>
+      <text x="45" y="5" font-size="8" fill="#7C2D12">FAILED</text>
+    </g>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Governance Diagram - Evidence Provenance</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Template for evidence provenance diagrams with timeline, document nodes, verification badges, and provenance chain connections.
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <filter id="silhouetteSmooth" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background (transparent) -->
+  <rect width="400" height="200" fill="transparent"/>
+  
+  <!-- Regal Sentinel Silhouette - Minimal, clean lines -->
+  <g id="sentinelSilhouette">
+    
+    <!-- Full lion silhouette in solid white -->
+    <path d="M50 150 
+            Q80 120 120 110 
+            Q160 100 200 110 
+            Q240 120 280 120 
+            Q320 120 350 150 
+            Q360 160 350 170 
+            Q330 180 300 180 
+            Q280 180 260 170 
+            Q240 160 220 160 
+            Q200 160 180 170 
+            Q160 180 140 170 
+            Q120 160 100 170 
+            Q80 180 60 170 
+            Q50 160 50 150 Z"
+          fill="#F8F9FA" stroke="none" filter="url(#silhouetteSmooth)"/>
+    
+    <!-- Head and mane detail -->
+    <path d="M100 110 
+            Q80 90 70 70 
+            Q80 50 100 40 
+            Q120 30 140 40 
+            Q160 50 180 60 
+            Q200 70 200 90 
+            Q180 100 160 100 
+            Q140 100 120 90 
+            Q100 80 100 110 Z"
+          fill="#F8F9FA" stroke="none"/>
+    
+    <!-- Crown silhouette -->
+    <path d="M120 30 
+            Q130 15 150 15 
+            Q170 15 180 30 
+            Q190 40 180 50 
+            Q160 55 140 55 
+            Q120 50 110 40 
+            Q120 30 Z"
+          fill="#F8F9FA" stroke="none"/>
+    
+    <!-- Crown points -->
+    <path d="M140 15 L150 5 L160 15 Z" fill="#F8F9FA" stroke="none"/>
+    <path d="M170 15 L180 5 L190 15 Z" fill="#F8F9FA" stroke="none"/>
+    
+    <!-- Legs (subtle) -->
+    <path d="M140 170 Q150 180 160 190 Q170 200 160 200 Q150 200 140 190 Q130 180 140 170 Z"
+          fill="#F8F9FA" stroke="none" opacity="0.8"/>
+    <path d="M200 170 Q210 180 220 190 Q230 200 220 200 Q210 200 200 190 Q190 180 200 170 Z"
+          fill="#F8F9FA" stroke="none" opacity="0.8"/>
+    <path d="M260 170 Q270 180 280 190 Q290 200 280 200 Q270 200 260 190 Q250 180 260 170 Z"
+          fill="#F8F9FA" stroke="none" opacity="0.8"/>
+    
+    <!-- Tail -->
+    <path d="M350 150 Q370 140 380 130 Q390 120 380 110 Q370 100 350 110 Q340 120 350 150 Z"
+          fill="#F8F9FA" stroke="none" opacity="0.8"/>
+  </g>
+  
+  <!-- Optional: Cyan connector line for composition -->
+  <g id="silhouetteConnector" opacity="0.5">
+    <line x1="200" y1="50" x2="200" y2="180" stroke="#00D4FF" stroke-width="1" stroke-dasharray="2,2"/>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Regal Sentinel - Silhouette</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Minimal silhouette of the Regal Sentinel for watermarks and subtle applications.
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

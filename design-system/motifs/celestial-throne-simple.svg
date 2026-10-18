@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <!-- Color Definitions -->
+    <linearGradient id="simpleThroneGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    
+    <radialGradient id="simpleAtmosphere" cx="50%" cy="0%" r="100%" fx="50%" fy="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0A0A0F"/>
+    </radialGradient>
+    
+    <filter id="simpleSoftShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background: Deep Teal Atmosphere -->
+  <rect width="400" height="300" fill="url(#simpleAtmosphere)"/>
+  
+  <!-- Celestial Throne - Minimal Version -->
+  <g id="simpleCelestialThrone">
+    
+    <!-- Base Platform -->
+    <rect x="100" y="250" width="200" height="15" 
+          fill="#1E3A8A" stroke="#D4AF37" stroke-width="1"/>
+    
+    <!-- Steps -->
+    <rect x="150" y="235" width="100" height="15" 
+          fill="#1E3A8A" stroke="#D4AF37" stroke-width="0.5"/>
+    
+    <!-- Throne Chair (Simplified) -->
+    <g id="simpleChair">
+      <!-- Seat -->
+      <path d="M150 220 Q175 210 200 220 L200 230 Q175 240 150 230 Z"
+            fill="#1E3A8A" stroke="#D4AF37" stroke-width="1"/>
+      
+      <!-- Backrest -->
+      <path d="M150 220 Q140 190 150 170 Q170 150 200 160 Q230 170 250 170 Q270 170 280 190 Q280 220 L250 220 Q230 220 200 210 Q170 220 150 220 Z"
+            fill="#1E3A8A" stroke="#D4AF37" stroke-width="1"/>
+      
+      <!-- Armrests -->
+      <path d="M150 220 Q140 215 130 220" 
+            fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <path d="M250 220 Q260 215 270 220" 
+            fill="none" stroke="#D4AF37" stroke-width="1"/>
+    </g>
+    
+    <!-- Columns (Simplified) -->
+    <g id="simpleColumns">
+      <!-- Left Column -->
+      <path d="M120 235 L120 100 Q130 80 140 60 L140 235 Z" 
+            fill="#1E3A8A" stroke="#D4AF37" stroke-width="1"/>
+      
+      <!-- Right Column -->
+      <path d="M280 235 L280 100 Q270 80 260 60 L260 235 Z" 
+            fill="#1E3A8A" stroke="#D4AF37" stroke-width="1"/>
+      
+      <!-- Column Capitals -->
+      <rect x="115" y="60" width="30" height="15" 
+            fill="url(#simpleThroneGold)" stroke="#B8860B" stroke-width="0.5"/>
+      <rect x="265" y="60" width="30" height="15" 
+            fill="url(#simpleThroneGold)" stroke="#B8860B" stroke-width="0.5"/>
+      
+      <!-- Column Bases -->
+      <rect x="115" y="235" width="30" height="15" 
+            fill="url(#simpleThroneGold)" stroke="#B8860B" stroke-width="0.5"/>
+      <rect x="265" y="235" width="30" height="15" 
+            fill="url(#simpleThroneGold)" stroke="#B8860B" stroke-width="0.5"/>
+    </g>
+    
+    <!-- Arch (Simplified) -->
+    <g id="simpleArch">
+      <!-- Arch Curve -->
+      <path d="M140 60 Q200 40 260 60" 
+            fill="none" stroke="#D4AF37" stroke-width="2"/>
+      
+      <!-- Arch Detail -->
+      <path d="M140 60 Q160 50 180 55 Q200 60 220 55 Q240 50 260 60" 
+            fill="none" stroke="#F4E48C" stroke-width="1"/>
+      
+      <!-- Arch Medallion -->
+      <circle cx="200" cy="45" r="10" fill="#1E3A8A" stroke="#D4AF37" stroke-width="1"/>
+      <circle cx="200" cy="45" r="6" fill="url(#simpleThroneGold)" stroke="#B8860B" stroke-width="0.5"/>
+      <circle cx="200" cy="45" r="3" fill="#00D4FF"/>
+    </g>
+    
+    <!-- Gold Detailing -->
+    <g id="simpleDetails">
+      <!-- Seat Border -->
+      <path d="M150 220 Q175 210 200 220" 
+            fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+      
+      <!-- Backrest Border -->
+      <path d="M150 220 Q140 190 150 170 Q170 150 200 160 Q230 170 250 170 Q270 170 280 190 Q280 220" 
+            fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+      
+      <!-- Central Medallion on Platform -->
+      <circle cx="200" cy="242" r="8" fill="url(#simpleThroneGold)" stroke="#B8860B" stroke-width="0.5"/>
+      <circle cx="200" cy="242" r="4" fill="#1E3A8A"/>
+      <circle cx="200" cy="242" r="1.5" fill="#00D4FF"/>
+    </g>
+  </g>
+  
+  <!-- Optional: Holographic Intelligence Accent -->
+  <g id="simpleHolographic" opacity="0.2" transform="translate(200, 150)">
+    <circle cx="0" cy="0" r="40" stroke="#00D4FF" stroke-width="0.5" fill="none"/>
+    <circle cx="0" cy="0" r="60" stroke="#00D4FF" stroke-width="0.5" fill="none"/>
+    <line x1="-40" y1="0" x2="40" y2="0" stroke="#00D4FF" stroke-width="0.3"/>
+    <line x1="0" y1="-40" x2="0" y2="40" stroke="#00D4FF" stroke-width="0.3"/>
+  </g>
+  
+  <!-- Metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Celestial Throne - Simple</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Minimal version of the Celestial Throne for smaller applications.
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

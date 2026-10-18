@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <!-- Color Definitions -->
+    <linearGradient id="sentinelManeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F9FA"/>
+      <stop offset="50%" stop-color="#E0E0E0"/>
+      <stop offset="100%" stop-color="#C0C0C0"/>
+    </linearGradient>
+    
+    <radialGradient id="sentinelEyeGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#0099CC"/>
+    </radialGradient>
+    
+    <linearGradient id="crownGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#F4E48C"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    
+    <filter id="sentinelSoftGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background (optional, for standalone use) -->
+  <rect width="800" height="800" fill="#0A0A0F"/>
+  
+  <!-- Celestial aura behind lion -->
+  <ellipse cx="400" cy="500" rx="300" ry="150" fill="url(#fisk-gradient-celestial)" opacity="0.3" 
+           filter="url(#sentinelSoftGlow)"/>
+  
+  <!-- Lion Body -->
+  <g id="sentinelLion">
+    
+    <!-- Body Base -->
+    <path d="M300 550 Q350 500 450 480 Q550 460 600 520 Q620 550 600 580 Q550 620 500 640 Q450 660 400 650 Q350 640 300 550 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    
+    <!-- Chest and Neck -->
+    <path d="M400 480 Q420 420 450 380 Q480 350 500 320 Q520 300 510 280 Q480 250 450 240 Q400 230 350 250 Q320 270 310 290 Q340 320 370 350 Q400 380 400 480 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    
+    <!-- Head -->
+    <path d="M310 290 Q280 250 260 220 Q250 200 260 180 Q280 160 310 150 Q350 140 380 150 Q400 160 400 180 Q400 200 390 220 Q370 250 340 280 Q310 290 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    
+    <!-- Mane (Geometric Flow) -->
+    <path d="M260 220 Q240 200 220 180 Q200 160 190 140 Q200 120 220 110 Q250 100 280 110 Q310 120 320 140 Q330 160 340 180 Q350 200 350 220 Q340 240 320 250 Q300 260 280 250 Q260 240 260 220 Z"
+          fill="url(#sentinelManeGradient)" stroke="#A0A0A0" stroke-width="1"/>
+    
+    <path d="M340 180 Q360 160 380 140 Q400 120 410 110 Q430 100 450 110 Q470 120 480 140 Q490 160 490 180 Q480 200 460 210 Q440 220 420 240 Q400 250 380 240 Q360 230 340 220 Q340 200 340 180 Z"
+          fill="url(#sentinelManeGradient)" stroke="#A0A0A0" stroke-width="1"/>
+    
+    <!-- Ears -->
+    <path d="M260 180 Q250 170 245 150 Q250 140 260 150 Q270 160 260 180 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="1"/>
+    <path d="M440 180 Q450 170 455 150 Q450 140 440 150 Q430 160 440 180 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="1"/>
+    
+    <!-- Inner Ears -->
+    <path d="M255 160 Q250 155 250 145 Q255 140 260 150 Q255 160 Z"
+          fill="#E0E0E0" stroke="none"/>
+    <path d="M445 160 Q450 155 450 145 Q445 140 440 150 Q445 160 Z"
+          fill="#E0E0E0" stroke="none"/>
+    
+    <!-- Eyes (Icy Cyan with Glow) -->
+    <ellipse cx="340" cy="210" rx="12" ry="10" fill="#0F172A"/>
+    <ellipse cx="340" cy="210" rx="8" ry="6" fill="url(#sentinelEyeGlow)"/>
+    <circle cx="342" cy="208" r="2" fill="#00D4FF"/>
+    
+    <ellipse cx="390" cy="200" rx="12" ry="10" fill="#0F172A"/>
+    <ellipse cx="390" cy="200" rx="8" ry="6" fill="url(#sentinelEyeGlow)"/>
+    <circle cx="392" cy="198" r="2" fill="#00D4FF"/>
+    
+    <!-- Nose and Mouth -->
+    <path d="M365 240 Q370 245 375 240" stroke="#0F172A" stroke-width="2" fill="none"/>
+    <ellipse cx="365" cy="235" rx="4" ry="3" fill="#0F172A"/>
+    
+    <!-- Pupils (subtle) -->
+    <circle cx="340" cy="210" r="3" fill="#0A0A0F"/>
+    <circle cx="390" cy="200" r="3" fill="#0A0A0F"/>
+    
+    <!-- Crown (Antique Gold with Sapphire Jewels) -->
+    <g id="sentinelCrown">
+      <!-- Crown Base -->
+      <path d="M280 110 Q300 90 340 95 Q380 100 420 95 Q460 90 480 110 Q490 120 480 130 Q460 140 420 145 Q380 150 340 145 Q300 140 280 130 Q270 120 280 110 Z"
+            fill="url(#crownGoldGradient)" stroke="#B8860B" stroke-width="2"/>
+      
+      <!-- Crown Points -->
+      <path d="M340 95 L350 70 L360 95 Z" fill="url(#crownGoldGradient)" stroke="#B8860B" stroke-width="1"/>
+      <path d="M380 100 L390 75 L400 100 Z" fill="url(#crownGoldGradient)" stroke="#B8860B" stroke-width="1"/>
+      <path d="M420 100 L430 75 L440 100 Z" fill="url(#crownGoldGradient)" stroke="#B8860B" stroke-width="1"/>
+      <path d="M300 100 L310 75 L320 100 Z" fill="url(#crownGoldGradient)" stroke="#B8860B" stroke-width="1"/>
+      <path d="M260 110 L270 85 L280 110 Z" fill="url(#crownGoldGradient)" stroke="#B8860B" stroke-width="1"/>
+      
+      <!-- Sapphire Jewels -->
+      <circle cx="350" cy="95" r="6" fill="#1E3A8A"/>
+      <circle cx="390" cy="100" r="6" fill="#1E3A8A"/>
+      <circle cx="430" cy="100" r="6" fill="#1E3A8A"/>
+      <circle cx="310" cy="100" r="6" fill="#1E3A8A"/>
+      <circle cx="270" cy="110" r="6" fill="#1E3A8A"/>
+      
+      <!-- Jewel Highlights -->
+      <circle cx="352" cy="92" r="2" fill="#00D4FF"/>
+      <circle cx="392" cy="97" r="2" fill="#00D4FF"/>
+      <circle cx="432" cy="97" r="2" fill="#00D4FF"/>
+      <circle cx="312" cy="97" r="2" fill="#00D4FF"/>
+      <circle cx="272" cy="107" r="2" fill="#00D4FF"/>
+      
+      <!-- Crown Inner Detail -->
+      <path d="M340 105 Q360 100 380 105 Q400 110 420 105 Q440 100 460 105"
+            stroke="#F4E48C" stroke-width="1" fill="none"/>
+    </g>
+    
+    <!-- Legs -->
+    <path d="M320 650 Q330 680 340 700 Q345 720 340 740 Q335 760 320 750 Q305 740 300 720 Q305 690 320 650 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    <path d="M480 650 Q470 680 460 700 Q455 720 460 740 Q465 760 480 750 Q495 740 500 720 Q495 690 480 650 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    <path d="M360 650 Q370 680 380 700 Q385 720 380 740 Q375 760 360 750 Q345 740 350 720 Q355 690 360 650 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    <path d="M440 650 Q430 680 420 700 Q415 720 420 740 Q425 760 440 750 Q455 740 450 720 Q445 690 440 650 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    
+    <!-- Paws -->
+    <ellipse cx="320" cy="750" rx="15" ry="8" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="1"/>
+    <ellipse cx="480" cy="750" rx="15" ry="8" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="1"/>
+    <ellipse cx="360" cy="750" rx="15" ry="8" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="1"/>
+    <ellipse cx="440" cy="750" rx="15" ry="8" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="1"/>
+    
+    <!-- Tail -->
+    <path d="M600 580 Q640 560 680 540 Q700 520 690 500 Q680 480 650 480 Q620 480 600 520 Q600 550 600 580 Z"
+          fill="#F8F9FA" stroke="#E0E0E0" stroke-width="2"/>
+    <path d="M680 540 Q690 530 700 520 Q710 510 705 500 Q700 490 690 500"
+          stroke="#A0A0A0" stroke-width="1" fill="none"/>
+    
+    <!-- Tail Tuft -->
+    <path d="M690 500 Q700 490 710 485 Q720 480 715 475 Q710 470 700 475 Q690 480 690 500 Z"
+          fill="#E0E0E0" stroke="#A0A0A0" stroke-width="1"/>
+    
+    <!-- Subtle shadow for depth -->
+    <ellipse cx="400" cy="750" rx="200" ry="50" fill="#0A0A0F" opacity="0.3" 
+             filter="url(#sentinelSoftGlow)"/>
+  </g>
+  
+  <!-- Holographic Intelligence Accent (optional overlay) -->
+  <g id="sentinelHolographicOverlay" opacity="0.3">
+    <circle cx="400" cy="300" r="80" stroke="#00D4FF" stroke-width="1" fill="none"/>
+    <circle cx="400" cy="300" r="120" stroke="#00D4FF" stroke-width="1" fill="none"/>
+    <circle cx="400" cy="300" r="160" stroke="#00D4FF" stroke-width="1" fill="none"/>
+    
+    <!-- Neural connections -->
+    <line x1="320" y1="260" x2="480" y2="260" stroke="#00D4FF" stroke-width="0.5"/>
+    <line x1="320" y1="300" x2="480" y2="300" stroke="#00D4FF" stroke-width="0.5"/>
+    <line x1="320" y1="340" x2="480" y2="340" stroke="#00D4FF" stroke-width="0.5"/>
+    
+    <line x1="360" y1="220" x2="360" y2="380" stroke="#00D4FF" stroke-width="0.5"/>
+    <line x1="440" y1="220" x2="440" y2="380" stroke="#00D4FF" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Metadata for attribution -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="">
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Regal Sentinel - Full Figure</dc:title>
+        <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">
+          Majestic white lion with flowing white-silver mane, icy cyan eyes, refined gold crown with blue jewels. 
+          Part of the Fisk Dimension × Omega-9 Canonical Visual System.
+        </dc:description>
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fisk Dimension Design System</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024</dc:date>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+</svg>

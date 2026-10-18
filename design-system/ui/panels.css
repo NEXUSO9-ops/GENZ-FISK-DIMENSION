@@ -1,0 +1,330 @@
+/* FISK DIMENSION × OMEGA-9 — UI Components: Panels */
+/* Version: 1.0.0 */
+
+/* ===== Panel Base Styles ===== */
+.fisk-panel {
+  background: var(--fisk-navy);
+  border-radius: var(--fisk-radius-standard);
+  padding: var(--fisk-space-lg);
+  box-shadow: var(--fisk-shadow-md);
+}
+
+/* ===== Primary Panel ===== */
+.fisk-panel-primary {
+  background: var(--fisk-navy);
+  border: var(--fisk-border-standard) solid var(--fisk-cyan);
+  border-radius: var(--fisk-radius-standard);
+  padding: var(--fisk-space-lg);
+  box-shadow: var(--fisk-shadow-md);
+}
+
+.fisk-panel-primary .fisk-panel-header {
+  border-bottom: 1px solid var(--fisk-cyan-20);
+  padding-bottom: var(--fisk-space-md);
+  margin-bottom: var(--fisk-space-md);
+}
+
+.fisk-panel-primary .fisk-panel-title {
+  color: var(--fisk-cyan);
+  font-size: var(--fisk-text-xl);
+  font-weight: var(--fisk-font-semibold);
+  margin: 0;
+}
+
+/* ===== Secondary Panel ===== */
+.fisk-panel-secondary {
+  background: var(--fisk-obsidian);
+  border: var(--fisk-border-standard) solid var(--fisk-sapphire);
+  opacity: 0.5;
+  border-radius: var(--fisk-radius-subtle);
+  padding: var(--fisk-space-md);
+}
+
+/* ===== Card ===== */
+.fisk-card {
+  background: var(--fisk-navy);
+  border: 1px solid var(--fisk-cyan-20);
+  border-radius: var(--fisk-radius-standard);
+  padding: var(--fisk-space-md);
+  transition: all var(--fisk-transition-normal);
+}
+
+.fisk-card:hover {
+  border-color: var(--fisk-cyan);
+  box-shadow: var(--fisk-shadow-md);
+}
+
+.fisk-card:active {
+  transform: translateY(1px);
+}
+
+/* ===== Card Variants ===== */
+.fisk-card-sm {
+  padding: var(--fisk-space-sm);
+}
+
+.fisk-card-lg {
+  padding: var(--fisk-space-lg);
+}
+
+.fisk-card-compact {
+  padding: var(--fisk-space-xs);
+}
+
+/* ===== Panel Header ===== */
+.fisk-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--fisk-space-md);
+}
+
+.fisk-panel-header .fisk-panel-title {
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-lg);
+  font-weight: var(--fisk-font-semibold);
+  margin: 0;
+}
+
+.fisk-panel-header .fisk-panel-subtitle {
+  color: var(--fisk-cyan-80);
+  font-size: var(--fisk-text-sm);
+  margin: var(--fisk-space-xs) 0 0 0;
+}
+
+.fisk-panel-header .fisk-panel-actions {
+  display: flex;
+  gap: var(--fisk-space-xs);
+}
+
+/* ===== Panel Body ===== */
+.fisk-panel-body {
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-base);
+  line-height: var(--fisk-lead-normal);
+}
+
+/* ===== Panel Footer ===== */
+.fisk-panel-footer {
+  border-top: 1px solid var(--fisk-cyan-10);
+  padding-top: var(--fisk-space-md);
+  margin-top: var(--fisk-space-md);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--fisk-space-sm);
+}
+
+/* ===== Status Panels ===== */
+.fisk-panel-verified {
+  border-color: var(--fisk-verified);
+  box-shadow: 0 0 0 2px var(--fisk-verified-10);
+}
+
+.fisk-panel-reported {
+  border-color: var(--fisk-reported);
+  box-shadow: 0 0 0 2px var(--fisk-reported-10);
+}
+
+.fisk-panel-pending {
+  border-color: var(--fisk-pending);
+  box-shadow: 0 0 0 2px var(--fisk-pending-10);
+}
+
+.fisk-panel-blocked {
+  border-color: var(--fisk-blocked);
+  box-shadow: 0 0 0 2px var(--fisk-blocked-10);
+}
+
+.fisk-panel-failed {
+  border-color: var(--fisk-failed);
+  box-shadow: 0 0 0 2px var(--fisk-failed-10);
+}
+
+/* ===== Panel with Motif Background ===== */
+.fisk-panel-motif {
+  position: relative;
+  overflow: hidden;
+}
+
+.fisk-panel-motif::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0 50 L100 50 M50 0 L50 100' stroke='%2300D4FF' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+  background-size: 50px 50px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.fisk-panel-motif > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Dashboard Panels ===== */
+.fisk-panel-dashboard {
+  background: var(--fisk-navy);
+  border: 1px solid var(--fisk-cyan-20);
+  border-radius: var(--fisk-radius-standard);
+  padding: var(--fisk-space-lg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fisk-panel-dashboard .fisk-panel-dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--fisk-space-md);
+}
+
+.fisk-panel-dashboard .fisk-panel-dashboard-title {
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-lg);
+  font-weight: var(--fisk-font-semibold);
+  margin: 0;
+}
+
+.fisk-panel-dashboard .fisk-panel-dashboard-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--fisk-cyan-10);
+  border-radius: var(--fisk-radius-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fisk-cyan);
+}
+
+.fisk-panel-dashboard .fisk-panel-dashboard-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.fisk-panel-dashboard .fisk-panel-dashboard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fisk-panel-dashboard .fisk-panel-dashboard-value {
+  color: var(--fisk-cyan);
+  font-size: var(--fisk-text-3xl);
+  font-weight: var(--fisk-font-bold);
+  margin: var(--fisk-space-sm) 0;
+}
+
+.fisk-panel-dashboard .fisk-panel-dashboard-label {
+  color: var(--fisk-ice);
+  font-size: var(--fisk-text-sm);
+  opacity: 0.8;
+}
+
+.fisk-panel-dashboard .fisk-panel-dashboard-trend {
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-xs);
+  margin-top: var(--fisk-space-sm);
+  color: var(--fisk-cyan);
+  font-size: var(--fisk-text-sm);
+}
+
+.fisk-panel-dashboard .fisk-panel-dashboard-trend svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== Panel Grid ===== */
+.fisk-panel-grid {
+  display: grid;
+  gap: var(--fisk-space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.fisk-panel-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fisk-panel-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.fisk-panel-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ===== Collapsible Panel ===== */
+.fisk-panel-collapsible {
+  transition: all var(--fisk-transition-normal);
+}
+
+.fisk-panel-collapsible.collapsed .fisk-panel-body {
+  display: none;
+}
+
+.fisk-panel-collapsible .fisk-panel-collapsible-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--fisk-space-xs);
+  color: var(--fisk-cyan);
+  font-size: var(--fisk-text-sm);
+  transition: transform var(--fisk-transition-normal);
+}
+
+.fisk-panel-collapsible.collapsed .fisk-panel-collapsible-toggle {
+  transform: rotate(-90deg);
+}
+
+.fisk-panel-collapsible .fisk-panel-collapsible-toggle svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--fisk-transition-normal);
+}
+
+/* ===== Panel with Status Indicator ===== */
+.fisk-panel-status {
+  position: relative;
+}
+
+.fisk-panel-status::before {
+  content: "";
+  position: absolute;
+  top: var(--fisk-space-md);
+  left: var(--fisk-space-md);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--fisk-cyan);
+  box-shadow: 0 0 0 2px var(--fisk-navy);
+}
+
+.fisk-panel-status.fisk-panel-verified::before {
+  background: var(--fisk-verified);
+  box-shadow: 0 0 0 2px var(--fisk-navy);
+}
+
+.fisk-panel-status.fisk-panel-reported::before {
+  background: var(--fisk-reported);
+  box-shadow: 0 0 0 2px var(--fisk-navy);
+}
+
+.fisk-panel-status.fisk-panel-pending::before {
+  background: var(--fisk-pending);
+  box-shadow: 0 0 0 2px var(--fisk-navy);
+}
+
+.fisk-panel-status.fisk-panel-blocked::before {
+  background: var(--fisk-blocked);
+  box-shadow: 0 0 0 2px var(--fisk-navy);
+}
+
+.fisk-panel-status.fisk-panel-failed::before {
+  background: var(--fisk-failed);
+  box-shadow: 0 0 0 2px var(--fisk-navy);
+}
